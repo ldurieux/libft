@@ -1,0 +1,13 @@
+libft
+
+*.o
+*.exe
+*.out
+*.cflags
+*.config
+*.creator
+*.user
+*.cxxflags
+*.files
+*.includes
+*.swp
