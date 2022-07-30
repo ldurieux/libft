@@ -29,6 +29,9 @@ t_size	strlen_aligned(const char *str, const char *chr_ptr,
 	}
 }
 
+/* first check unaligned bytes one by one
+ * then do it by 8 bytes once we're aligned
+*/
 t_size	ft_strlen(const char *str)
 {
 	const char	*chr_ptr;
