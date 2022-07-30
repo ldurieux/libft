@@ -1,4 +1,5 @@
 libft
+main.c
 
 *.o
 *.exe
@@ -11,3 +12,4 @@ libft
 *.files
 *.includes
 *.swp
+.qtc_clangd

@@ -1,20 +1,26 @@
-SRCS = main.c
-OBJS = ${SRCS:.c=.o}
-CC = gcc
+SRCS =  main.c \
+        srcs/ft_strlen.c
+
+OBJS	= ${SRCS:.c=.o}
+CC	= gcc
+CCFLAGS	= -Wall -Wextra
 ifeq ($(OS), Windows_NT)
-	CCFLAGS = -Wall -Wextra
+	CCSANITIZE = 
 else
-	CCFLAGS = -Wall -Wextra -fsanitize=address -g3
+        CCSANITIZE = -fsanitize=address -g3
 endif
-NAME = libft
+NAME	= libft
 
 .PHONY: all clean fclean re
 
-%.o : %.c
+srcs/ft_str_utils.o : srcs/ft_str_utils.c
 	$(CC) $(CCFLAGS) -c $< -o $@
+
+%.o : %.c
+	$(CC) $(CCSANITIZE) $(CCFLAGS) -c $< -o $@
 	
 $(NAME) : $(OBJS)
-	$(CC) $(CCFLAGS) -o $@ $^
+	$(CC) $(CCSANITIZE) $(CCFLAGS) -o $@ $^
 
 all : $(NAME)
 
