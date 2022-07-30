@@ -12,4 +12,6 @@ main.c
 *.files
 *.includes
 *.swp
+*.json
+*.dbg
 .qtc_clangd
