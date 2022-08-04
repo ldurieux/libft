@@ -7,7 +7,7 @@ main.c
 *.cflags
 *.config
 *.creator
-*.user
+*.user*
 *.cxxflags
 *.files
 *.includes
