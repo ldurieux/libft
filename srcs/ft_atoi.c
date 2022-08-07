@@ -17,6 +17,11 @@ int	ft_atoi(const char *str)
 	return (res * sign);
 }
 
+/* atol does not seem to have the same behaviour as atoi
+ * when int/long overflows
+ * need to check the behavious on OSX
+ * same for atoll
+*/
 long	ft_atol(const char *str)
 {
 	long	res;

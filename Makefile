@@ -3,7 +3,8 @@ SRCS =  main.c \
 	srcs/ft_memcpy.c \
 	srcs/ft_strcmp.c \
 	srcs/ft_putstr.c \
-	srcs/ft_atoi.c
+	srcs/ft_atoi.c \
+	srcs/ft_itoa.c
 
 HEADERS = includes/
 
