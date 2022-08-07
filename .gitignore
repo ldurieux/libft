@@ -2,6 +2,7 @@ libft
 main.c
 
 *.o
+*.d
 *.exe
 *.out
 *.cflags

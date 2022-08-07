@@ -1,4 +1,4 @@
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, t_size len)
 {
@@ -22,7 +22,7 @@ void	*ft_memcpy(void *dst, const void *src, t_size len)
 	{
 		c_dst = (char *)dst;
 		c_src = (const char *)src;
-		while (++i < len / sizeof(t_uint64))
+		while (++i < len)
 			c_dst[i] = c_src[i];
 	}
 	return (dst);

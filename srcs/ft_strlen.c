@@ -1,4 +1,4 @@
-#include "../includes/libft.h"
+#include "libft.h"
 
 t_size	strlen_aligned(const char *str, const char *chr_ptr,
 	register t_size *lw_ptr, register t_size lw)
