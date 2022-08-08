@@ -10,6 +10,7 @@ SRCS =  main.c \
 	srcs/ft_strstr.c \
 	srcs/ft_strcpy.c \
 	srcs/ft_strcat.c \
+	srcs/ft_str_tocase.c \
 
 HEADERS = includes/
 

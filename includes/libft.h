@@ -43,6 +43,10 @@ char		*ft_strcat(char *dest, const char *src);
 char		*ft_strncat(char *dest, const char *src, t_size n);
 t_size		ft_strlcat(char *dest, const char *src, t_size size);
 
+char		*ft_str_tolowcase(char *str);
+char		*ft_str_toupcase(char *str);
+char		*ft_str_capitalize(char *str);
+
 /*MEM*/
 void		*ft_memcpy(void *dst, const void *src, t_size len);
 void		*ft_calloc(t_size count, t_size size);
