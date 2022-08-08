@@ -58,36 +58,11 @@ char		*ft_convert_base(const char *str,
 				const char *from, const char *to);
 
 /*INLINES*/
-/*CHAR TYPE*/
+/*CHARACTER TYPE*/
 static inline t_bool	ft_is_whitespace(const char chr)
 {
 	return (chr == ' ' || chr == '\f' || chr == '\n'
 		|| chr == '\r' || chr == '\t' || chr == '\v');
-}
-
-static inline t_bool	ft_is_digit(const char chr)
-{
-	return (chr >= '0' && chr <= '9');
-}
-
-static inline t_int64	ft_chr_index(const char *str, const char chr)
-{
-	t_int64	index;
-
-	index = -1;
-	while (str[++index])
-		if (str[index] == chr)
-			return (index);
-	return (-1);
-}
-
-/*STRING*/
-static inline t_bool	ft_str_contains(const char *str, const char *search)
-{
-	while (*str)
-		if (ft_chr_index(search, *str++) != -1)
-			return (1);
-	return (0);
 }
 
 /*SIMPLE MATH*/

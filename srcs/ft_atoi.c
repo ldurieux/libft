@@ -1,5 +1,10 @@
 #include "libft.h"
 
+static inline t_bool	ft_is_digit(const char chr)
+{
+	return (chr >= '0' && chr <= '9');
+}
+
 int	ft_atoi(const char *str)
 {
 	int	res;

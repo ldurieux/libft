@@ -2,6 +2,17 @@
 
 #define LLONG_MAX_SIZE 64
 
+static inline t_int64	ft_chr_index(const char *str, const char chr)
+{
+	t_int64	index;
+
+	index = -1;
+	while (str[++index])
+		if (str[index] == chr)
+			return (index);
+	return (-1);
+}
+
 long long	ft_atoll_base(const char *str, const char *base, int raddix)
 {
 	long long	res;
@@ -25,23 +36,12 @@ long long	ft_atoll_base(const char *str, const char *base, int raddix)
 	return (res * sign);
 }
 
-static inline char	*ft_itoa_res(char *buf, t_size len)
-{
-	char	*res;
-
-	res = malloc(sizeof(char) * (len + 1));
-	if (!res)
-		return (NULL);
-	ft_memcpy(res, buf, len);
-	res[len] = '\0';
-	return (res);
-}
-
 char	*ft_lltoa_base(long long value, const char *base, int raddix)
 {
 	long long	copy;
 	char		buf[LLONG_MAX_SIZE + 1];
 	char		*buf_ptr;
+	char		*res;
 
 	buf_ptr = &buf[LLONG_MAX_SIZE];
 	copy = value;
@@ -53,7 +53,13 @@ char	*ft_lltoa_base(long long value, const char *base, int raddix)
 	copy = (value < 0) * '-' + (value == 0) * base[0];
 	if (copy)
 		*buf_ptr-- = copy;
-	return (ft_itoa_res(buf_ptr + 1, &buf[LLONG_MAX_SIZE] - buf_ptr));
+	copy = &buf[LLONG_MAX_SIZE] - buf_ptr;
+	res = malloc(sizeof(char) * (copy + 1));
+	if (!res)
+		return (NULL);
+	ft_memcpy(res, buf_ptr + 1, copy);
+	res[copy] = '\0';
+	return (res);
 }
 
 t_bool	ft_check_base(const char *base, size_t len)
