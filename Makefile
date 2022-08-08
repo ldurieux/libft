@@ -7,7 +7,8 @@ SRCS =  main.c \
 	srcs/ft_itoa.c \
 	srcs/ft_convert_base.c \
 	srcs/ft_calloc.c \
-	srcs/ft_strstr.c
+	srcs/ft_strstr.c \
+	srcs/ft_strcpy.c \
 
 HEADERS = includes/
 
