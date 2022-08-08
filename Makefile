@@ -4,7 +4,8 @@ SRCS =  main.c \
 	srcs/ft_strcmp.c \
 	srcs/ft_putstr.c \
 	srcs/ft_atoi.c \
-	srcs/ft_itoa.c
+	srcs/ft_itoa.c \
+	srcs/ft_convert_base.c
 
 HEADERS = includes/
 

@@ -35,7 +35,7 @@ char	*ft_itoa(int value)
 	return (ft_itoa_res(buf_ptr + 1, &buf[INT_MAX_SIZE] - buf_ptr));
 }
 
-char *ft_ltoa(long value)
+char	*ft_ltoa(long value)
 {
 	long	copy;
 	char	buf[LONG_MAX_SIZE + 1];
@@ -54,7 +54,7 @@ char *ft_ltoa(long value)
 	return (ft_itoa_res(buf_ptr + 1, &buf[LONG_MAX_SIZE] - buf_ptr));
 }
 
-char *ft_lltoa(long long value)
+char	*ft_lltoa(long long value)
 {
 	long long	copy;
 	char		buf[LLONG_MAX_SIZE + 1];
