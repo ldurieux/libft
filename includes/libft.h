@@ -34,9 +34,14 @@ void		ft_putstr(char *str);
 t_size		ft_strlen(const char *str);
 int			ft_strcmp(const char *s1, const char *s2);
 char		*ft_strstr(char *haystack, const char *needle);
+
 char		*ft_strcpy(char	*dest, const char *src);
 char		*ft_strncpy(char *dest, const char *src, t_size n);
-int			ft_strlcpy(char *dest, const char *src, t_size size);
+t_size		ft_strlcpy(char *dest, const char *src, t_size size);
+
+char		*ft_strcat(char *dest, const char *src);
+char		*ft_strncat(char *dest, const char *src, t_size n);
+t_size		ft_strlcat(char *dest, const char *src, t_size size);
 
 /*MEM*/
 void		*ft_memcpy(void *dst, const void *src, t_size len);

@@ -26,7 +26,7 @@ char	*ft_strncpy(char *dest, const char *src, t_size n)
 	return (dest);
 }
 
-int	ft_strlcpy(char *dest, const char *src, t_size size)
+t_size	ft_strlcpy(char *dest, const char *src, t_size size)
 {
 	t_size	i;
 
