@@ -5,14 +5,15 @@ SRCS =  main.c \
 	srcs/ft_putstr.c \
 	srcs/ft_atoi.c \
 	srcs/ft_itoa.c \
-	srcs/ft_convert_base.c
+	srcs/ft_convert_base.c \
+	srcs/ft_calloc.c
 
 HEADERS = includes/
 
 OBJS		= ${SRCS:.c=.o}
 DEPS		= ${SRCS:.c=.d}
 CC			= gcc
-CCFLAGS		= -Wall -Wextra
+CCFLAGS		= -Wall -Wextra -fsanitize=address -g3
 DEPSFLAGS	= -MMD -MP
 NAME		= libft
 

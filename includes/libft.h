@@ -36,6 +36,7 @@ int			ft_strcmp(const char *s1, const char *s2);
 
 /*MEM*/
 void		*ft_memcpy(void *dst, const void *src, t_size len);
+void		*ft_calloc(t_size count, t_size size);
 
 /*INT STRING CONVERSION*/
 int			ft_atoi(const char *str);
