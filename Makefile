@@ -15,6 +15,7 @@ SRCS =  main.c \
 	srcs/ft_swap.c \
 	srcs/ft_factorial.c \
 	srcs/ft_power.c \
+	srcs/ft_strtrimmed.c \
 
 HEADERS = includes/
 

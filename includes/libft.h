@@ -54,6 +54,11 @@ t_bool		ft_str_isletter(const char *str);
 t_bool		ft_str_isdigit(const char *str);
 t_bool		ft_str_isprintable(const char *str);
 
+char		*ft_strtrimmed_lead(char *str);
+char		*ft_strtrimmed_trail(char *str);
+char		*ft_strtrimmed(char *str);
+char		*ft_strsimplified(char *str);
+
 /*MEM*/
 void		ft_swap(void *a, void *b, t_size size);
 void		*ft_memcpy(void *dst, const void *src, t_size len);
