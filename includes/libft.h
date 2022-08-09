@@ -71,6 +71,7 @@ char		*ft_convert_base(const char *str,
 
 /*MATH*/
 t_uint64	ft_factorial(t_int64 value);
+t_int64		ft_power(t_int64 value, t_int64 power);
 
 /*INLINES*/
 /*CHARACTER TYPE*/
