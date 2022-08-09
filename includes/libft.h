@@ -50,10 +50,11 @@ char		*ft_str_capitalize(char *str);
 t_bool		ft_str_iswhitespace(const char *str);
 t_bool		ft_str_isalphanum(const char *str);
 t_bool		ft_str_isletter(const char *str);
-t_bool		ft_str_isupcase(const char *str);
-t_bool		ft_str_islowcase(const char *str);
+t_bool		ft_str_isdigit(const char *str);
+t_bool		ft_str_isprintable(const char *str);
 
 /*MEM*/
+void		ft_swap(void *a, void *b, t_size size);
 void		*ft_memcpy(void *dst, const void *src, t_size len);
 void		*ft_calloc(t_size count, t_size size);
 
