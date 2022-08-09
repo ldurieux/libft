@@ -33,6 +33,7 @@ void		ft_putstr(char *str);
 /*STRING*/
 t_size		ft_strlen(const char *str);
 int			ft_strcmp(const char *s1, const char *s2);
+int			ft_strncmp(const char *s1, const char *s2, t_size n);
 char		*ft_strstr(char *haystack, const char *needle);
 
 char		*ft_strcpy(char	*dest, const char *src);
