@@ -2,7 +2,7 @@
 
 void	ft_swap(void *a, void *b, t_size size)
 {
-	void *tmp;
+	void	*tmp;
 
 	tmp = malloc(size);
 	ft_memcpy(tmp, a, size);
