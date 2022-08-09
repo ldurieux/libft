@@ -69,6 +69,9 @@ char		*ft_lltoa(long long value);
 char		*ft_convert_base(const char *str,
 				const char *from, const char *to);
 
+/*MATH*/
+t_uint64	ft_factorial(t_int64 value);
+
 /*INLINES*/
 /*CHARACTER TYPE*/
 static inline t_bool	ft_is_whitespace(const char chr)

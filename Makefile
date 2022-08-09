@@ -13,6 +13,7 @@ SRCS =  main.c \
 	srcs/ft_str_tocase.c \
 	srcs/ft_str_is.c \
 	srcs/ft_swap.c \
+	srcs/ft_factorial.c \
 
 HEADERS = includes/
 
