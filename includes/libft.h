@@ -65,6 +65,7 @@ t_size		ft_strlcat(char *dest, const char *src, t_size size);
 char		*ft_strlwr(char *str);
 char		*ft_strupr(char *str);
 char		*ft_strcap(char *str);
+char		*ft_strrev(char *str);
 
 t_bool		ft_str_iswhitespace(const char *str);
 t_bool		ft_str_isalphanum(const char *str);
