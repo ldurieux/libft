@@ -72,7 +72,7 @@ char		*ft_strrev(char *str);
 
 t_bool		ft_str_iswhitespace(const char *str);
 t_bool		ft_str_isalphanum(const char *str);
-t_bool		ft_str_isletter(const char *str);
+t_bool		ft_str_isalpha(const char *str);
 t_bool		ft_str_isdigit(const char *str);
 t_bool		ft_str_isprintable(const char *str);
 

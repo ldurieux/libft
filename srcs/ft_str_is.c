@@ -39,7 +39,7 @@ t_bool	ft_str_isalphanum(const char *str)
 	return (1);
 }
 
-t_bool	ft_str_isletter(const char *str)
+t_bool	ft_str_isalpha(const char *str)
 {
 	t_size	i;
 
