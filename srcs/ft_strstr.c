@@ -16,6 +16,8 @@ char	*ft_strstr(char *haystack, const char *needle)
 {
 	t_size	i;
 
+	if (!needle[0])
+		return (haystack);
 	while (*haystack)
 	{
 		i = 0;
@@ -24,6 +26,26 @@ char	*ft_strstr(char *haystack, const char *needle)
 		if (!needle[i])
 			return (haystack);
 		haystack++;
+	}
+	return (NULL);
+}
+
+char	*ft_strrstr(char *haystack, const char *needle)
+{
+	t_size	i;
+	char	*hs_copy;
+
+	if (!needle[0])
+		return (haystack);
+	hs_copy = haystack + ft_strlen(haystack) - 1;
+	while (hs_copy >= haystack)
+	{
+		i = 0;
+		while (hs_copy[i] == needle[i] && hs_copy[i])
+			i++;
+		if (!needle[i])
+			return (hs_copy);
+		hs_copy--;
 	}
 	return (NULL);
 }
