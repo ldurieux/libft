@@ -79,7 +79,8 @@ t_size		ft_strspn(const char *str, const char *chrs);
 char		*ft_strpbrk(char *str, const char *chrs);
 char		*ft_strtok_r(char *str, const char *delims, char **save_ptr);
 
-char		*ft_strjoin(char **strs, char *delimiter);
+char		*ft_strjoin(char **strs, const char *delim);
+char		**ft_strsplit(char *str, const char *delims);
 
 /*MEM*/
 void		ft_swap(void *a, void *b, t_size size);

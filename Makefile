@@ -23,6 +23,7 @@ SRCS =  main.c \
 	srcs/ft_strspn.c \
 	srcs/ft_strtok.c \
 	srcs/ft_strpbrk.c \
+	srcs/ft_strsplit.c \
 
 HEADERS = includes/
 

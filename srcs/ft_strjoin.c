@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strjoin(char **strs, char *delimiter)
+char	*ft_strjoin(char **strs, const char *delim)
 {
 	t_size	total_len;
 	t_size	delimiter_len;
@@ -20,7 +20,7 @@ char	*ft_strjoin(char **strs, char *delimiter)
 	t_size	offset;
 	char	*res;
 
-	delimiter_len = ft_strlen(delimiter);
+	delimiter_len = ft_strlen(delim);
 	total_len = 0;
 	i = -1;
 	while (strs[++i])
@@ -35,7 +35,7 @@ char	*ft_strjoin(char **strs, char *delimiter)
 	{
 		offset += ft_strlcpy(&res[offset], strs[i], total_len + 1);
 		if (strs[i + 1])
-			offset += ft_strlcpy(&res[offset], delimiter, delimiter_len + 1);
+			offset += ft_strlcpy(&res[offset], delim, delimiter_len + 1);
 	}
 	return (res);
 }
