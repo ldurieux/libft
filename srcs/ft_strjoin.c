@@ -37,6 +37,5 @@ char	*ft_strjoin(char **strs, char *delimiter)
 		if (strs[i + 1])
 			offset += ft_strlcpy(&res[offset], delimiter, delimiter_len + 1);
 	}
-	res[offset] = '\0';
 	return (res);
 }
