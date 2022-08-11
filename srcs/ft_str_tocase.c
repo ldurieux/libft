@@ -26,7 +26,7 @@ static inline t_bool	ft_is_alphanum(const char chr)
 	return (ft_is_letter(chr) || (chr >= '0' && chr <= '9'));
 }
 
-char	*ft_str_tolowcase(char *str)
+char	*ft_strlwr(char *str)
 {
 	t_size	i;
 
@@ -40,7 +40,7 @@ char	*ft_str_tolowcase(char *str)
 	return (str);
 }
 
-char	*ft_str_toupcase(char *str)
+char	*ft_strupr(char *str)
 {
 	t_size	i;
 
@@ -54,7 +54,7 @@ char	*ft_str_toupcase(char *str)
 	return (str);
 }
 
-char	*ft_str_capitalize(char *str)
+char	*ft_strcap(char *str)
 {
 	t_bool	first_letter;
 	t_size	i;

@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-char	*ft_strsimplified(char *str)
+char	*ft_strsmp(char *str)
 {
 	t_size	to_idx;
 	t_size	from_idx;
 
-	str = ft_strtrimmed(str);
+	str = ft_strtrm(str);
 	from_idx = 0;
 	to_idx = 0;
 	while (str[from_idx])

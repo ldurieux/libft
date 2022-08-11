@@ -56,9 +56,9 @@ char		*ft_strcat(char *dest, const char *src);
 char		*ft_strncat(char *dest, const char *src, t_size n);
 t_size		ft_strlcat(char *dest, const char *src, t_size size);
 
-char		*ft_str_tolowcase(char *str);
-char		*ft_str_toupcase(char *str);
-char		*ft_str_capitalize(char *str);
+char		*ft_strlwr(char *str);
+char		*ft_strupr(char *str);
+char		*ft_strcap(char *str);
 
 t_bool		ft_str_iswhitespace(const char *str);
 t_bool		ft_str_isalphanum(const char *str);
@@ -66,10 +66,10 @@ t_bool		ft_str_isletter(const char *str);
 t_bool		ft_str_isdigit(const char *str);
 t_bool		ft_str_isprintable(const char *str);
 
-char		*ft_strtrimmed_lead(char *str);
-char		*ft_strtrimmed_trail(char *str);
-char		*ft_strtrimmed(char *str);
-char		*ft_strsimplified(char *str);
+char		*ft_strtrm_lead(char *str);
+char		*ft_strtrm_trail(char *str);
+char		*ft_strtrm(char *str);
+char		*ft_strsmp(char *str);
 
 char		*ft_strjoin(char **strs, char *delimiter);
 

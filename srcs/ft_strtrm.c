@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-char	*ft_strtrimmed_lead(char *str)
+char	*ft_strtrm_lead(char *str)
 {
 	while (ft_is_whitespace(*str))
 		str++;
 	return (str);
 }
 
-char	*ft_strtrimmed_trail(char *str)
+char	*ft_strtrm_trail(char *str)
 {
 	t_size	len;
 	t_size	i;
@@ -35,9 +35,9 @@ char	*ft_strtrimmed_trail(char *str)
 	return (str);
 }
 
-char	*ft_strtrimmed(char *str)
+char	*ft_strtrm(char *str)
 {
-	str = ft_strtrimmed_lead(str);
-	str = ft_strtrimmed_trail(str);
+	str = ft_strtrm_lead(str);
+	str = ft_strtrm_trail(str);
 	return (str);
 }
