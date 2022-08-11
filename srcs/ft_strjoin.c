@@ -28,6 +28,8 @@ char	*ft_strjoin(char **strs, char *delimiter)
 	if (total_len > 0)
 		total_len -= delimiter_len;
 	res = malloc(sizeof(char) * (total_len + 1));
+	if (!res)
+		return (NULL);
 	i = -1;
 	offset = 0;
 	while (strs[++i])

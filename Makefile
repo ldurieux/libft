@@ -19,6 +19,7 @@ SRCS =  main.c \
 	srcs/ft_strsmp.c \
 	srcs/ft_strjoin.c \
 	srcs/ft_strtoi.c \
+	srcs/ft_strdup.c \
 
 HEADERS = includes/
 
@@ -28,6 +29,7 @@ CC			= gcc
 CCFLAGS		= -Wall -Wextra -g
 DEPSFLAGS	= -MMD -MP
 NAME		= libft
+RM			= rm -f
 
 .PHONY: all clean fclean re
 
@@ -37,10 +39,10 @@ $(NAME) : $(OBJS)
 all : $(NAME)
 
 clean :
-		-rm -f $(OBJS) $(DEPS)
+		-$(RM) $(OBJS) $(DEPS)
 
 fclean : clean
-		-rm -f $(NAME)
+		-$(RM) $(NAME)
 
 re : fclean all
 
