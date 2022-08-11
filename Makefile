@@ -18,6 +18,7 @@ SRCS =  main.c \
 	srcs/ft_strtrm.c \
 	srcs/ft_strsmp.c \
 	srcs/ft_strjoin.c \
+	srcs/ft_strtoi.c \
 
 HEADERS = includes/
 
