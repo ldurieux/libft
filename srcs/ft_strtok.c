@@ -1,43 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtok.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldurieux <ldurieux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/11 16:25:36 by ldurieux          #+#    #+#             */
-/*   Updated: 2022/08/11 16:25:37 by ldurieux         ###   ########lyon.fr   */
+/*   Created: 2022/08/11 17:32:51 by ldurieux          #+#    #+#             */
+/*   Updated: 2022/08/11 17:32:53 by ldurieux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strtok_r(char *str, const char *delims, char **save_ptr)
 {
+	char	*end;
 	char	*res;
-	t_size	src_len;
 
-	src_len = ft_strlen(src);
-	res = malloc(sizeof(char) * (src_len + 1));
-	if (!res)
+	str += ft_strspn(str, delims);
+	end = ft_strpbrk(str, delims);
+	if (!end)
+		end = str + ft_strlen(str);
+	if (end - str == 0)
 		return (NULL);
-	ft_memcpy(res, src, src_len);
-	res[src_len] = '\0';
-	return (res);
-}
-
-char	*ft_strndup(const char *src, t_size n)
-{
-	char	*res;
-	t_size	src_len;
-
-	src_len = ft_strlen(src);
-	if (n < src_len)
-		src_len = n;
-	res = malloc(sizeof(char) * (src_len + 1));
-	if (!res)
-		return (NULL);
-	ft_memcpy(res, src, src_len);
-	res[src_len] = '\0';
+	res = ft_strndup(str, end - str);
+	*save_ptr = end;
 	return (res);
 }

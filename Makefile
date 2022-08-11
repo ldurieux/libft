@@ -20,6 +20,9 @@ SRCS =  main.c \
 	srcs/ft_strjoin.c \
 	srcs/ft_strtoi.c \
 	srcs/ft_strdup.c \
+	srcs/ft_strspn.c \
+	srcs/ft_strtok.c \
+	srcs/ft_strpbrk.c \
 
 HEADERS = includes/
 
