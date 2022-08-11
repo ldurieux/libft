@@ -17,13 +17,14 @@ SRCS =  main.c \
 	srcs/ft_power.c \
 	srcs/ft_strtrimmed.c \
 	srcs/ft_strsimplified.c \
+	srcs/ft_strjoin.c \
 
 HEADERS = includes/
 
 OBJS		= ${SRCS:.c=.o}
 DEPS		= ${SRCS:.c=.d}
 CC			= gcc
-CCFLAGS		= -Wall -Wextra -fsanitize=address -g3
+CCFLAGS		= -Wall -Wextra -g
 DEPSFLAGS	= -MMD -MP
 NAME		= libft
 

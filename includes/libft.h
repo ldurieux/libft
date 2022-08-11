@@ -71,6 +71,8 @@ char		*ft_strtrimmed_trail(char *str);
 char		*ft_strtrimmed(char *str);
 char		*ft_strsimplified(char *str);
 
+char		*ft_strjoin(char **strs, char *delimiter);
+
 /*MEM*/
 void		ft_swap(void *a, void *b, t_size size);
 void		*ft_memcpy(void *dst, const void *src, t_size len);
