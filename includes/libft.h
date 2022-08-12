@@ -48,6 +48,8 @@ t_size		ft_strnlen(const char *str, t_size n);
 
 int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, t_size n);
+int			ft_stricmp(const char *s1, const char *s2);
+int			ft_strnicmp(const char *s1, const char *s2, t_size n);
 
 char		*ft_strchr(char *str, char chr);
 char		*ft_strrchr(char *str, char chr);
