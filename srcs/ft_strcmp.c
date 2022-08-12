@@ -45,7 +45,7 @@ static inline unsigned char	ft_chrlwr(unsigned char c)
 	t_bool	cmp;
 
 	cmp = (c >= 'A') * (c <= 'Z');
-	return (c * !cmp + (c + 32) * cmp);
+	return (c + 32 * cmp);
 }
 
 int	ft_stricmp(const char *s1, const char *s2)
