@@ -1,4 +1,4 @@
-SRCS =  main.c \
+SRCS = \
 	srcs/ft_strlen.c \
 	srcs/ft_memcpy.c \
 	srcs/ft_strcmp.c \
@@ -34,13 +34,17 @@ DEPS		= ${SRCS:.c=.d}
 CC			= gcc
 CCFLAGS		= -Wall -Wextra -g
 DEPSFLAGS	= -MMD -MP
-NAME		= libft
-RM			= rm -f
+LIBDIR		= lib
+NAME		= libft.a
+RM			= rm -Rf
 
 .PHONY: all clean fclean re
 
-$(NAME) : $(OBJS)
-		$(CC) $(CCFLAGS) -I$(HEADERS) -o $@ $^
+$(NAME) : $(OBJS) $(LIBDIR)
+		ar rc $(LIBDIR)/$@ $(OBJS)
+
+$(LIBDIR) :
+		mkdir $(LIBDIR)
 
 all : $(NAME)
 
@@ -49,6 +53,7 @@ clean :
 
 fclean : clean
 		-$(RM) $(NAME)
+		-$(RM) $(LIBDIR)
 
 re : fclean all
 
