@@ -26,6 +26,7 @@ SRCS = \
 	srcs/ft_strsplit.c \
 	srcs/ft_strrev.c \
 	srcs/ft_strchr.c \
+	srcs/ft_memset.c \
 
 HEADERS = includes/
 
@@ -42,6 +43,7 @@ RM			= rm -Rf
 
 $(NAME) : $(OBJS) $(LIBDIR)
 		ar rc $(LIBDIR)/$@ $(OBJS)
+		#$(CC) $(CCFLAGS) $(DEPSFLAGS) -I$(HEADERS) -o $@ $(OBJS)
 
 $(LIBDIR) :
 		mkdir $(LIBDIR)

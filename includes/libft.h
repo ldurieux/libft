@@ -93,6 +93,7 @@ char		**ft_strsplit(char *str, const char *delims);
 /*MEM*/
 void		ft_swap(void *a, void *b, t_size size);
 void		*ft_memcpy(void *dst, const void *src, t_size len);
+void		*ft_memset(void *dst, const t_uint8 value, t_size len);
 void		*ft_calloc(t_size count, t_size size);
 
 /*INT STRING CONVERSION*/
