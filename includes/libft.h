@@ -6,7 +6,7 @@
 /*   By: ldurieux <ldurieux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 12:13:23 by ldurieux          #+#    #+#             */
-/*   Updated: 2022/08/11 12:13:24 by ldurieux         ###   ########lyon.fr   */
+/*   Updated: 2022/08/14 22:54:21 by ldurieux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@
 # define UINT_MAX	0xffffffff
 # define INT_MAX	0x7fffffff
 # define INT_MIN	0x80000000
+# define USHORT_MAX	0xffff
+# define SHORT_MAX	0x7fff
+# define SHORT_MIN	0x8000
+# define UBYTE_MAX	0xff
+# define BYTE_MAX	0x7f
+# define BYTE_MIN	0x80
 
 typedef unsigned long long	t_size;
 typedef unsigned char		t_bool;
