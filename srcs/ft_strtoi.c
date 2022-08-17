@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+#define BASE_10_LEN 10
+
 static inline t_bool	ft_is_digit(const char chr)
 {
 	return (chr >= '0' && chr <= '9');
@@ -32,7 +34,7 @@ int	ft_strtoi(char *str, char **end_ptr)
 			sign = -1;
 	while (ft_is_digit(*str))
 	{
-		tmp = res * 10 + (*str++ - '0') * sign;
+		tmp = res * BASE_10_LEN + (*str++ - '0') * sign;
 		if ((tmp < res && sign == 1) || (tmp > res && sign == -1))
 		{
 			res = INT_MAX * (sign == 1) + INT_MIN * (sign == -1);
@@ -60,7 +62,7 @@ long	ft_strtol(char *str, char **end_ptr)
 			sign = -1;
 	while (ft_is_digit(*str))
 	{
-		tmp = res * 10 + (*str++ - '0') * sign;
+		tmp = res * BASE_10_LEN + (*str++ - '0') * (long)sign;
 		if ((tmp < res && sign == 1) || (tmp > res && sign == -1))
 		{
 			res = LONG_MAX * (sign == 1) + LONG_MIN * (sign == -1);
@@ -88,7 +90,7 @@ long long	ft_strtoll(char *str, char **end_ptr)
 			sign = -1;
 	while (ft_is_digit(*str))
 	{
-		tmp = res * 10 + (*str++ - '0') * sign;
+		tmp = res * BASE_10_LEN + (*str++ - '0') * (long long)sign;
 		if ((tmp < res && sign == 1) || (tmp > res && sign == -1))
 		{
 			res = LLONG_MAX * (sign == 1) + LLONG_MIN * (sign == -1);

@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+#define CASE_OFFSET 32
+
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	register const unsigned char	*r1 = (unsigned char *)s1;
@@ -45,7 +47,7 @@ static inline unsigned char	ft_chrlwr(unsigned char c)
 	t_bool	cmp;
 
 	cmp = (c >= 'A') * (c <= 'Z');
-	return (c + 32 * cmp);
+	return (c + CASE_OFFSET * cmp);
 }
 
 int	ft_stricmp(const char *s1, const char *s2)

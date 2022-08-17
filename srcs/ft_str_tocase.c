@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+#define CASE_OFFSET 32
+
 /*return -1 if chr is a lowercase letter
  *		  1 if chr is an uppercase letter
  *		  0 otherwise
@@ -34,7 +36,7 @@ char	*ft_strlwr(char *str)
 	while (str[i])
 	{
 		if (ft_is_letter(str[i]) == 1)
-			str[i] += 32;
+			str[i] += CASE_OFFSET;
 		i++;
 	}
 	return (str);
@@ -48,7 +50,7 @@ char	*ft_strupr(char *str)
 	while (str[i])
 	{
 		if (ft_is_letter(str[i]) == -1)
-			str[i] -= 32;
+			str[i] -= CASE_OFFSET;
 		i++;
 	}
 	return (str);
@@ -68,9 +70,9 @@ char	*ft_strcap(char *str)
 		{
 			is_letter = ft_is_letter(str[i]);
 			if (is_letter == -1 && first_letter)
-				str[i] -= 32;
+				str[i] -= CASE_OFFSET;
 			else if (is_letter == 1 && !first_letter)
-				str[i] += 32;
+				str[i] += CASE_OFFSET;
 			first_letter = 0;
 		}
 		else

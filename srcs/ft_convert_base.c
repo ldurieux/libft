@@ -27,9 +27,9 @@ static inline t_int64	ft_chr_index(const char *str, const char chr)
 
 long long	ft_atoll_base(const char *str, const char *base, int raddix)
 {
-	long long	res;
-	t_int64		digit;
-	int			sign;
+	t_int64	res;
+	t_int64	digit;
+	int		sign;
 
 	res = 0;
 	sign = 1;
@@ -48,12 +48,12 @@ long long	ft_atoll_base(const char *str, const char *base, int raddix)
 	return (res * sign);
 }
 
-char	*ft_lltoa_base(long long value, const char *base, int raddix)
+char	*ft_lltoa_base(t_int64 value, const char *base, int raddix)
 {
-	long long	copy;
-	char		buf[LLONG_MAX_SIZE + 1];
-	char		*buf_ptr;
-	char		*res;
+	t_int64	copy;
+	char	buf[LLONG_MAX_SIZE + 1];
+	char	*buf_ptr;
+	char	*res;
 
 	buf_ptr = &buf[LLONG_MAX_SIZE];
 	copy = value;
@@ -64,7 +64,7 @@ char	*ft_lltoa_base(long long value, const char *base, int raddix)
 	}
 	copy = (value < 0) * '-' + (value == 0) * base[0];
 	if (copy)
-		*buf_ptr-- = copy;
+		*buf_ptr-- = (char)copy;
 	copy = &buf[LLONG_MAX_SIZE] - buf_ptr;
 	res = malloc(sizeof(char) * (copy + 1));
 	if (!res)
@@ -91,14 +91,14 @@ t_bool	ft_check_base(const char *base, size_t len)
 
 char	*ft_convert_base(const char *str, const char *from, const char *to)
 {
-	long long	value;
-	size_t		from_len;
-	size_t		to_len;
+	t_int64	value;
+	size_t	from_len;
+	size_t	to_len;
 
 	from_len = ft_strlen(from);
 	to_len = ft_strlen(to);
 	if (!(ft_check_base(from, from_len) && ft_check_base(to, to_len)))
 		return (NULL);
-	value = ft_atoll_base(str, from, from_len);
-	return (ft_lltoa_base(value, to, to_len));
+	value = ft_atoll_base(str, from, (int)from_len);
+	return (ft_lltoa_base(value, to, (int)to_len));
 }

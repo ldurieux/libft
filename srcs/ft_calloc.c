@@ -24,10 +24,10 @@ void	*ft_calloc(t_size count, t_size size)
 	if (!res)
 		return (NULL);
 	i_ptr = (t_uint64 *) res;
-	while (mem_size > 7)
+	while (mem_size > sizeof(t_uint64) - 1)
 	{
 		*i_ptr++ = 0;
-		mem_size -= 8;
+		mem_size -= sizeof(t_uint64);
 	}
 	c_ptr = (char *) i_ptr;
 	while (mem_size-- > 0)

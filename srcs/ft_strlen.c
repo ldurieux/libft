@@ -12,13 +12,18 @@
 
 #include "libft.h"
 
+#define ALIGN_CHECK 0x07
+#define NULL_CHECK_LOW 0x0101010101010101
+#define NULL_CHECK_HIGH 0x8080808080808080
+
+// NOLINTBEGIN
 static const char	*strlen_aligned(const char *chr_ptr,
 	register t_size *lw_ptr, register t_size lw)
 {
 	while (1)
 	{
 		lw = *lw_ptr++;
-		if ((lw - 0x0101010101010101) & ~lw & 0x8080808080808080)
+		if ((lw - NULL_CHECK_LOW) & ~lw & NULL_CHECK_HIGH)
 		{
 			chr_ptr = (char *)(lw_ptr - 1);
 			if (chr_ptr[0] == 0)
@@ -40,6 +45,7 @@ static const char	*strlen_aligned(const char *chr_ptr,
 		}
 	}
 }
+// NOLINTEND
 
 /* first check unaligned bytes one by one
  * then do it by 8 bytes once we're aligned
@@ -49,7 +55,7 @@ t_size	ft_strlen(const char *str)
 	const char	*chr_ptr;
 
 	chr_ptr = str;
-	while (((t_size)chr_ptr & 0x07) != 0)
+	while (((t_size)chr_ptr & ALIGN_CHECK) != 0)
 	{
 		if (*chr_ptr == '\0')
 			return (chr_ptr - str);
@@ -58,13 +64,14 @@ t_size	ft_strlen(const char *str)
 	return (strlen_aligned(chr_ptr, (t_size *)chr_ptr, 0) - str);
 }
 
+// NOLINTBEGIN
 static const char	*strnlen_aligned(const char *chr_ptr,
 	register t_size *lw_ptr, register t_size lw, const char *max)
 {
 	while ((char *)lw_ptr < max)
 	{
 		lw = *lw_ptr++;
-		if ((lw - 0x0101010101010101) & ~lw & 0x8080808080808080)
+		if ((lw - NULL_CHECK_LOW) & ~lw & NULL_CHECK_HIGH)
 		{
 			chr_ptr = (char *)(lw_ptr - 1);
 			if (chr_ptr[0] == 0)
@@ -87,6 +94,7 @@ static const char	*strnlen_aligned(const char *chr_ptr,
 	}
 	return (max);
 }
+// NOLINTEND
 
 t_size	ft_strnlen(const char *str, t_size n)
 {
@@ -94,7 +102,7 @@ t_size	ft_strnlen(const char *str, t_size n)
 	t_size		len;
 
 	chr_ptr = str;
-	while (((t_size)chr_ptr & 0x07) != 0 && (t_size)(chr_ptr - str) < n)
+	while (((t_size)chr_ptr & ALIGN_CHECK) != 0 && (t_size)(chr_ptr - str) < n)
 	{
 		if (*chr_ptr == '\0')
 			return (chr_ptr - str);

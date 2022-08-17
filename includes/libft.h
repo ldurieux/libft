@@ -131,8 +131,7 @@ static inline t_bool	ft_is_whitespace(const char chr)
 static inline t_uint64	ft_abs(t_int64 value)
 {
 	return (
-		value * (value > 0)
-		+ value * ((value < 0) * -1)
+		value * ((value > 0) * 2 - 1)
 	);
 }
 

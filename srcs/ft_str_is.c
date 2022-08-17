@@ -75,7 +75,7 @@ t_bool	ft_str_isprintable(const char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] < 32 || str[i] >= 127)
+		if (str[i] < ' ' || str[i] > '~')
 			return (0);
 		i++;
 	}

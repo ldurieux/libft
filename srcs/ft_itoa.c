@@ -15,6 +15,7 @@
 #define INT_MAX_SIZE 10
 #define LONG_MAX_SIZE 19
 #define LLONG_MAX_SIZE 19
+#define BASE_10_LEN 10
 
 static inline char	*ft_itoa_res(char *buf, t_size len)
 {
@@ -38,12 +39,12 @@ char	*ft_itoa(int value)
 	copy = value;
 	while (copy != 0)
 	{
-		*buf_ptr-- = ft_abs(copy % 10) + '0';
-		copy /= 10;
+		*buf_ptr-- = (char)(ft_abs(copy % BASE_10_LEN) + '0');
+		copy /= BASE_10_LEN;
 	}
 	copy = (value < 0) * '-' + (value == 0) * '0';
 	if (copy)
-		*buf_ptr-- = copy;
+		*buf_ptr-- = (char)copy;
 	return (ft_itoa_res(buf_ptr + 1, &buf[INT_MAX_SIZE] - buf_ptr));
 }
 
@@ -57,12 +58,12 @@ char	*ft_ltoa(long value)
 	copy = value;
 	while (copy != 0)
 	{
-		*buf_ptr-- = ft_abs(copy % 10) + '0';
-		copy /= 10;
+		*buf_ptr-- = (char)(ft_abs(copy % BASE_10_LEN) + '0');
+		copy /= BASE_10_LEN;
 	}
 	copy = (value < 0) * '-' + (value == 0) * '0';
 	if (copy)
-		*buf_ptr-- = copy;
+		*buf_ptr-- = (char)copy;
 	return (ft_itoa_res(buf_ptr + 1, &buf[LONG_MAX_SIZE] - buf_ptr));
 }
 
@@ -76,11 +77,11 @@ char	*ft_lltoa(long long value)
 	copy = value;
 	while (copy != 0)
 	{
-		*buf_ptr-- = ft_abs(copy % 10) + '0';
-		copy /= 10;
+		*buf_ptr-- = (char)(ft_abs(copy % BASE_10_LEN) + '0');
+		copy /= BASE_10_LEN;
 	}
 	copy = (value < 0) * '-' + (value == 0) * '0';
 	if (copy)
-		*buf_ptr-- = copy;
+		*buf_ptr-- = (char)copy;
 	return (ft_itoa_res(buf_ptr + 1, &buf[LLONG_MAX_SIZE] - buf_ptr));
 }

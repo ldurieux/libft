@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+#define BITS_IN_BYTE 8
+
 static inline t_uint64	make_mask(const t_uint8 value)
 {
 	t_uint64	res;
@@ -19,24 +21,23 @@ static inline t_uint64	make_mask(const t_uint8 value)
 
 	res = 0;
 	i = 0;
-	while (i++ < 8)
-		res = (res << 8) + value;
+	while (i++ < BITS_IN_BYTE)
+		res = (res << BITS_IN_BYTE) + value;
 	return (res);
 }
 
-void	*ft_memset(void *dst, const t_uint8 value, t_size len)
+void	*ft_memset(void *dst, t_uint8 value, t_size len)
 {
 	t_uint8		*c_ptr;
 	t_uint64	*i_ptr;
-	t_size		mem_size;
 	t_uint64	mask;
 
 	i_ptr = (t_uint64 *) dst;
 	mask = make_mask(value);
-	while (len > 7)
+	while (len > BITS_IN_BYTE - 1)
 	{
 		*i_ptr++ = mask;
-		len -= 8;
+		len -= BITS_IN_BYTE;
 	}
 	c_ptr = (t_uint8 *) i_ptr;
 	while (len-- > 0)

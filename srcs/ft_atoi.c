@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+#define BASE_10_LEN 10
+
 static inline t_bool	ft_is_digit(const char chr)
 {
 	return (chr >= '0' && chr <= '9');
@@ -30,7 +32,7 @@ int	ft_atoi(const char *str)
 		if (*str++ == '-')
 			sign = -1;
 	while (ft_is_digit(*str))
-		res = res * 10 + *str++ - '0';
+		res = res * BASE_10_LEN + *str++ - '0';
 	return (res * sign);
 }
 
@@ -52,7 +54,7 @@ long	ft_atol(const char *str)
 		if (*str++ == '-')
 			sign = -1;
 	while (ft_is_digit(*str))
-		res = res * 10 + *str++ - '0';
+		res = res * BASE_10_LEN + *str++ - '0';
 	return (res * sign);
 }
 
@@ -69,6 +71,6 @@ long long	ft_atoll(const char *str)
 		if (*str++ == '-')
 			sign = -1;
 	while (ft_is_digit(*str))
-		res = res * 10 + *str++ - '0';
+		res = res * BASE_10_LEN + *str++ - '0';
 	return (res * sign);
 }
