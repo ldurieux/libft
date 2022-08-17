@@ -27,6 +27,7 @@ SRCS = \
 	srcs/ft_strrev.c \
 	srcs/ft_strchr.c \
 	srcs/ft_memset.c \
+	srcs/ft_putnbr.c \
 
 HEADERS = includes/
 
