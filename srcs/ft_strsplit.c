@@ -20,7 +20,7 @@ static inline t_bool	ft_match_one_of(const char chr, const char *array)
 	return (0);
 }
 
-static inline t_size	ft_count_words(char *str, const char *delims)
+static inline t_size	ft_count_words(const char *str, const char *delims)
 {
 	t_size	count;
 
@@ -38,7 +38,7 @@ static inline t_size	ft_count_words(char *str, const char *delims)
 	return (count);
 }
 
-char	**ft_strsplit(char *str, const char *delims)
+char	**ft_strsplit(const char *str, const char *delims)
 {
 	t_size	words;
 	t_size	i;

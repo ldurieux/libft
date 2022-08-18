@@ -12,10 +12,11 @@
 
 #include "libft.h"
 
-char	*ft_strtok_r(char *str, const char *delims, char **save_ptr)
+char	*ft_strtok_r(const char *str, const char *delims,
+				const char **save_ptr)
 {
-	char	*end;
-	char	*res;
+	const char	*end;
+	char		*res;
 
 	str += ft_strspn(str, delims);
 	end = ft_strpbrk(str, delims);

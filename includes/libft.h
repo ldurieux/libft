@@ -48,7 +48,7 @@ typedef char				t_int8;
 typedef unsigned long long	t_ptrdiff;
 
 /*PRINT*/
-void		ft_putstr(char *str);
+void		ft_putstr(const char *str);
 void		ft_putnbr(int value);
 
 /*STRING*/
@@ -63,8 +63,8 @@ int			ft_strnicmp(const char *s1, const char *s2, t_size n);
 const char	*ft_strchr(const char *str, char chr);
 const char	*ft_strrchr(const char *str, char chr);
 
-char		*ft_strstr(char *haystack, const char *needle);
-char		*ft_strrstr(char *haystack, const char *needle);
+const char	*ft_strstr(const char *haystack, const char *needle);
+const char	*ft_strrstr(const char *haystack, const char *needle);
 
 char		*ft_strcpy(char	*dest, const char *src);
 char		*ft_strncpy(char *dest, const char *src, t_size n);
@@ -93,11 +93,12 @@ char		*ft_strtrm(char *str);
 char		*ft_strsmp(char *str);
 
 t_size		ft_strspn(const char *str, const char *chrs);
-char		*ft_strpbrk(char *str, const char *chrs);
-char		*ft_strtok_r(char *str, const char *delims, char **save_ptr);
+const char	*ft_strpbrk(const char *str, const char *chrs);
+char		*ft_strtok_r(const char *str, const char *delims,
+				const char **save_ptr);
 
 char		*ft_strjoin(char **strs, const char *delim);
-char		**ft_strsplit(char *str, const char *delims);
+char		**ft_strsplit(const char *str, const char *delims);
 
 /*MEM*/
 void		ft_swap(void *a, void *b, t_size size);
@@ -116,9 +117,9 @@ int			ft_atoi_base(const char *str, const char *base);
 long		ft_atol_base(const char *str, const char *base);
 long long	ft_atoll_base(const char *str, const char *base);
 
-int			ft_strtoi(char *str, char **end_ptr);
-long		ft_strtol(char *str, char **end_ptr);
-long long	ft_strtoll(char *str, char **end_ptr);
+int			ft_strtoi(const char *str, const char **end_ptr);
+long		ft_strtol(const char *str, const char **end_ptr);
+long long	ft_strtoll(const char *str, const char **end_ptr);
 
 char		*ft_itoa(int value);
 char		*ft_ltoa(long value);

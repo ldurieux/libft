@@ -20,7 +20,7 @@ static inline t_bool	ft_match_one_of(const char chr, const char *array)
 	return (0);
 }
 
-char	*ft_strpbrk(char *str, const char *chrs)
+const char	*ft_strpbrk(const char *str, const char *chrs)
 {
 	while (*str)
 		if (ft_match_one_of(*str++, chrs))

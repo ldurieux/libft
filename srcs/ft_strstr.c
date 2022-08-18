@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strstr(char *haystack, const char *needle)
+const char	*ft_strstr(const char *haystack, const char *needle)
 {
 	t_size	i;
 
@@ -30,10 +30,10 @@ char	*ft_strstr(char *haystack, const char *needle)
 	return (NULL);
 }
 
-char	*ft_strrstr(char *haystack, const char *needle)
+const char	*ft_strrstr(const char *haystack, const char *needle)
 {
-	t_size	i;
-	char	*hs_copy;
+	t_size		i;
+	const char	*hs_copy;
 
 	if (!needle[0])
 		return (haystack);
