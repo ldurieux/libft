@@ -128,9 +128,13 @@ char		*ft_strtrm(char *str);
 char		*ft_strsmp(char *str);
 
 /* count until a character in str is not
- * contained in str and return the count
+ * contained in accept and return the count
  * see man strspn(3) */
-t_size		ft_strspn(const char *str, const char *chrs);
+t_size		ft_strspn(const char *str, const char *accept);
+
+/* count until a character in str is
+ * contained in reject and return the count */
+t_size		ft_strcspn(const char *str, const char *reject);
 
 /* return the first occurence of any chrs in str
  * see man strpbrk(3) */
