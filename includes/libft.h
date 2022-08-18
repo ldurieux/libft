@@ -101,8 +101,10 @@ char		**ft_strsplit(char *str, const char *delims);
 
 /*MEM*/
 void		ft_swap(void *a, void *b, t_size size);
+
 void		*ft_memcpy(void *dst, const void *src, t_size len);
 void		*ft_memset(void *dst, t_uint8 value, t_size len);
+
 void		*ft_calloc(t_size count, t_size size);
 
 /*INT STRING CONVERSION*/
@@ -121,6 +123,10 @@ long long	ft_strtoll(char *str, char **end_ptr);
 char		*ft_itoa(int value);
 char		*ft_ltoa(long value);
 char		*ft_lltoa(long long value);
+
+char		*ft_itoa_base(int value, const char *base);
+char		*ft_ltoa_base(long value, const char *base);
+char		*ft_lltoa_base(long long value, const char *base);
 
 t_bool		ft_check_numeric_base(const char *base);
 char		*ft_convert_base(const char *str,
