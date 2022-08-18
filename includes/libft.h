@@ -45,6 +45,8 @@ typedef int					t_int32;
 typedef short				t_int16;
 typedef char				t_int8;
 
+typedef unsigned long long	t_ptrdiff;
+
 /*PRINT*/
 void		ft_putstr(char *str);
 void		ft_putnbr(int value);
@@ -58,8 +60,8 @@ int			ft_strncmp(const char *s1, const char *s2, t_size n);
 int			ft_stricmp(const char *s1, const char *s2);
 int			ft_strnicmp(const char *s1, const char *s2, t_size n);
 
-char		*ft_strchr(char *str, char chr);
-char		*ft_strrchr(char *str, char chr);
+const char	*ft_strchr(const char *str, char chr);
+const char	*ft_strrchr(const char *str, char chr);
 
 char		*ft_strstr(char *haystack, const char *needle);
 char		*ft_strrstr(char *haystack, const char *needle);
@@ -107,12 +109,20 @@ void		*ft_calloc(t_size count, t_size size);
 int			ft_atoi(const char *str);
 long		ft_atol(const char *str);
 long long	ft_atoll(const char *str);
+
+int			ft_atoi_base(const char *str, const char *base);
+long		ft_atol_base(const char *str, const char *base);
+long long	ft_atoll_base(const char *str, const char *base);
+
 int			ft_strtoi(char *str, char **end_ptr);
 long		ft_strtol(char *str, char **end_ptr);
 long long	ft_strtoll(char *str, char **end_ptr);
+
 char		*ft_itoa(int value);
 char		*ft_ltoa(long value);
 char		*ft_lltoa(long long value);
+
+t_bool		ft_check_numeric_base(const char *base);
 char		*ft_convert_base(const char *str,
 				const char *from, const char *to);
 

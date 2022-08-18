@@ -28,6 +28,8 @@ SRCS = \
 	srcs/ft_strchr.c \
 	srcs/ft_memset.c \
 	srcs/ft_putnbr.c \
+	srcs/ft_check_numeric_base.c \
+	srcs/ft_atoi_base.c \
 
 HEADERS = includes/
 
