@@ -147,7 +147,6 @@ const char	*ft_strpbrk(const char *str, const char *chrs);
 char		*ft_strtok_r(const char *str, const char *delims,
 				const char **save_ptr);
 
-
 /* return a string containing every string in strs
  * delimited by delim */
 char		*ft_strjoin(char **strs, const char *delim);
