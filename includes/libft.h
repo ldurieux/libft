@@ -69,15 +69,15 @@ int			ft_strnicmp(const char *s1, const char *s2, t_size n);
 
 /* find first or last occurence of chr in str
  * see man strchr(3) */
-const char	*ft_strchr(const char *str, char chr);
-const char	*ft_strrchr(const char *str, char chr);
+char		*ft_strchr(const char *str, char chr);
+char		*ft_strrchr(const char *str, char chr);
 
 /* find first or last offcurence of need in haystack
  * if nothing is found return NULL
  * if needle is empty return haystack
  * see man strstr(3) */
-const char	*ft_strstr(const char *haystack, const char *needle);
-const char	*ft_strrstr(const char *haystack, const char *needle);
+char		*ft_strstr(const char *haystack, const char *needle);
+char		*ft_strrstr(const char *haystack, const char *needle);
 
 /* copy a string, see man strcpy(3) */
 char		*ft_strcpy(char	*dest, const char *src);
@@ -138,7 +138,7 @@ t_size		ft_strcspn(const char *str, const char *reject);
 
 /* return the first occurence of any chrs in str
  * see man strpbrk(3) */
-const char	*ft_strpbrk(const char *str, const char *chrs);
+char		*ft_strpbrk(const char *str, const char *chrs);
 
 /* return a string starting from after any delims
  * and ending before any delims
