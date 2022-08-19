@@ -31,6 +31,7 @@ SRCS = \
 	srcs/ft_check_numeric_base.c \
 	srcs/ft_atoi_base.c \
 	srcs/ft_itoa_base.c \
+	srcs/ft_memmem.c \
 
 HEADERS = includes/
 

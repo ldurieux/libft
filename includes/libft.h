@@ -47,11 +47,11 @@ typedef char				t_int8;
 
 typedef unsigned long long	t_ptrdiff;
 
-/*PRINT*/
+/* --- PRINT --- */
 void		ft_putstr(const char *str);
 void		ft_putnbr(int value);
 
-/*STRING*/
+/* --- STRING --- */
 /* return the length of str
  * see man strlen(3) */
 t_size		ft_strlen(const char *str);
@@ -155,7 +155,7 @@ char		*ft_strjoin(char **strs, const char *delim);
  * delimited by any character contained in delims */
 char		**ft_strsplit(const char *str, const char *delims);
 
-/*MEM*/
+/* --- MEM ---*/
 /* swap 2 values of size size */
 void		ft_swap(void *a, void *b, t_size size);
 
@@ -167,11 +167,16 @@ void		*ft_memcpy(void *dst, const void *src, t_size len);
  * see man memset(3) */
 void		*ft_memset(void *dst, t_uint8 value, t_size len);
 
+/* same as strstr but ignores '\0'
+ * see man memmem(3) */
+void		*ft_memmem(const void *haystack, t_size haystack_len,
+				const void *needle, t_size needle_len);
+
 /* allocate memory and fill it with 0
  * see man calloc(3) */
 void		*ft_calloc(t_size count, t_size size);
 
-/*INT STRING CONVERSION*/
+/* --- INT STRING CONVERSION --- */
 /* ascii to integer
  * see man atoi(3) */
 int			ft_atoi(const char *str);
@@ -212,19 +217,19 @@ t_bool		ft_check_numeric_base(const char *base);
 char		*ft_convert_base(const char *str,
 				const char *from, const char *to);
 
-/*MATH*/
+/* --- MATH --- */
 t_uint64	ft_factorial(t_int64 value);
 t_int64		ft_power(t_int64 value, t_int64 power);
 
-/*INLINES*/
-/*CHARACTER TYPE*/
+/* --- INLINES --- */
+/* --- CHARACTER TYPE --- */
 static inline t_bool	ft_is_whitespace(const char chr)
 {
 	return (chr == ' ' || chr == '\f' || chr == '\n'
 		|| chr == '\r' || chr == '\t' || chr == '\v');
 }
 
-/*SIMPLE MATH*/
+/* --- SIMPLE MATH --- */
 static inline t_uint64	ft_abs(t_int64 value)
 {
 	return (
