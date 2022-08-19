@@ -72,7 +72,7 @@ int			ft_strnicmp(const char *s1, const char *s2, t_size n);
 char		*ft_strchr(const char *str, char chr);
 char		*ft_strrchr(const char *str, char chr);
 
-/* find first or last offcurence of need in haystack
+/* find first or last offcurence of needle in haystack
  * if nothing is found return NULL
  * if needle is empty return haystack
  * see man strstr(3) */
@@ -160,6 +160,7 @@ char		**ft_strsplit(const char *str, const char *delims);
 void		ft_swap(void *a, void *b, t_size size);
 
 /* copy a bloc of memory
+ * dst and src MUST NOT overlap
  * see man memcpy(3) */
 void		*ft_memcpy(void *dst, const void *src, t_size len);
 
@@ -170,6 +171,8 @@ void		*ft_memset(void *dst, t_uint8 value, t_size len);
 /* same as strstr but ignores '\0'
  * see man memmem(3) */
 void		*ft_memmem(const void *haystack, t_size haystack_len,
+				const void *needle, t_size needle_len);
+void		*ft_memrmem(const void *haystack, t_size haystack_len,
 				const void *needle, t_size needle_len);
 
 /* allocate memory and fill it with 0

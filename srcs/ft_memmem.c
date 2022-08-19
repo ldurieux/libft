@@ -33,3 +33,27 @@ void	*ft_memmem(const void *haystack, t_size haystack_len,
 	}
 	return (NULL);
 }
+
+void	*ft_memrmem(const void *haystack, t_size haystack_len,
+				const void *needle, t_size needle_len)
+{
+	t_size		i;
+	const void	*hs_copy;
+	const void	*haystack_end;
+
+	if (!needle_len)
+		return ((void *)haystack);
+	haystack_end = haystack + haystack_len;
+	hs_copy = haystack_end - 1;
+	while (hs_copy >= haystack)
+	{
+		i = 0;
+		while ((hs_copy + i) < haystack_end
+			&& ((const char *)hs_copy)[i] == ((const char *)needle)[i])
+			i++;
+		if (i == needle_len)
+			return ((void *)haystack);
+		hs_copy++;
+	}
+	return (NULL);
+}
