@@ -240,4 +240,18 @@ static inline t_uint64	ft_abs(t_int64 value)
 	);
 }
 
+static inline t_int64	ft_min(t_int64 v1, t_int64 v2)
+{
+	if (v1 > v2)
+		return (v2);
+	return (v1);
+}
+
+static inline t_int64	ft_max(t_int64 v1, t_int64 v2)
+{
+	if (v1 < v2)
+		return (v2);
+	return (v1);
+}
+
 #endif
