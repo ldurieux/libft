@@ -39,17 +39,19 @@
 typedef unsigned long long	t_size;
 typedef unsigned char		t_bool;
 
+typedef unsigned long long	t_uintmax;
 typedef unsigned long long	t_uint64;
 typedef unsigned int		t_uint32;
 typedef unsigned short		t_uint16;
 typedef unsigned char		t_uint8;
 
+typedef long long			t_intmax;
 typedef long long			t_int64;
 typedef int					t_int32;
 typedef short				t_int16;
 typedef char				t_int8;
 
-typedef unsigned long long	t_ptrdiff;
+typedef long long			t_ptrdiff;
 
 /* --- PRINT --- */
 void		ft_putstr(const char *str);
