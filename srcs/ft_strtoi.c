@@ -19,7 +19,7 @@ static inline t_bool	ft_is_digit(const char chr)
 	return (chr >= '0' && chr <= '9');
 }
 
-int	ft_strtoi(const char *str, const char **end_ptr)
+int	ft_strtoi(const char *str, char **end_ptr)
 {
 	int	res;
 	int	sign;
@@ -43,11 +43,11 @@ int	ft_strtoi(const char *str, const char **end_ptr)
 		res = tmp;
 	}
 	if (end_ptr)
-		*end_ptr = str;
+		*end_ptr = (char *)str;
 	return (res);
 }
 
-long	ft_strtol(const char *str, const char **end_ptr)
+long	ft_strtol(const char *str, char **end_ptr)
 {
 	long	res;
 	int		sign;
@@ -71,11 +71,11 @@ long	ft_strtol(const char *str, const char **end_ptr)
 		res = tmp;
 	}
 	if (end_ptr)
-		*end_ptr = str;
+		*end_ptr = (char *)str;
 	return (res);
 }
 
-long long	ft_strtoll(const char *str, const char **end_ptr)
+long long	ft_strtoll(const char *str, char **end_ptr)
 {
 	long long	res;
 	int			sign;
@@ -99,6 +99,6 @@ long long	ft_strtoll(const char *str, const char **end_ptr)
 		res = tmp;
 	}
 	if (end_ptr)
-		*end_ptr = str;
+		*end_ptr = (char *)str;
 	return (res);
 }

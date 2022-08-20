@@ -198,9 +198,9 @@ long long	ft_atoll_base(const char *str, const char *base);
 /* ascii to integer with a better handling of overflow
  * and end_ptr becomes the next character after the number
  * see man strtoi(3) */
-int			ft_strtoi(const char *str, const char **end_ptr);
-long		ft_strtol(const char *str, const char **end_ptr);
-long long	ft_strtoll(const char *str, const char **end_ptr);
+int			ft_strtoi(const char *str, char **end_ptr);
+long		ft_strtol(const char *str, char **end_ptr);
+long long	ft_strtoll(const char *str, char **end_ptr);
 
 /* interger to ascii
  * see man itoa(3) */
