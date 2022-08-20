@@ -32,6 +32,10 @@
 # define BYTE_MAX	0x7f
 # define BYTE_MIN	0x80
 
+# define STDIN	0
+# define STDOUT	1
+# define STDERR	2
+
 typedef unsigned long long	t_size;
 typedef unsigned char		t_bool;
 
