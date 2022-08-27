@@ -6,7 +6,7 @@
 /*   By: ldurieux <ldurieux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 18:08:55 by ldurieux          #+#    #+#             */
-/*   Updated: 2022/08/11 18:08:56 by ldurieux         ###   ########lyon.fr   */
+/*   Updated: 2022/08/27 16:22:12 by ldurieux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static inline t_size	ft_count_words(const char *str, const char *delims)
 			str++;
 		if (!*str)
 			break ;
-		while (!ft_match_one_of(*str, delims))
+		while (*str && !ft_match_one_of(*str, delims))
 			str++;
 		count++;
 	}
