@@ -24,3 +24,9 @@ void	ft_putstr_fd(char *s, int fd)
 	len = ft_strlen(s);
 	write(fd, s, len);
 }
+
+void	ft_putendl_fd(char *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}
