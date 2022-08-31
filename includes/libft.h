@@ -36,7 +36,7 @@
 # define STDOUT	1
 # define STDERR	2
 
-typedef unsigned char		t_bool;
+typedef int					t_bool;
 
 typedef unsigned long long	t_uintmax;
 typedef unsigned long long	t_uint64;
@@ -117,6 +117,12 @@ t_bool		ft_str_isalphanum(const char *str);
 t_bool		ft_str_isalpha(const char *str);
 t_bool		ft_str_isdigit(const char *str);
 t_bool		ft_str_isprintable(const char *str);
+
+t_bool		ft_isalpha(int chr);
+t_bool		ft_isdigit(int chr);
+t_bool		ft_isalnum(int chr);
+t_bool		ft_isascii(int chr);
+t_bool		ft_isprint(int chr);
 
 /* trim str of leading whitespaces */
 char		*ft_strtrm_lead(char *str);
