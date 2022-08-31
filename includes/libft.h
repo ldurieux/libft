@@ -165,6 +165,9 @@ char		*ft_strtok_r(const char *str, const char *delims,
 /* returns a substring of s that is allocated */
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 
+/* concatenate s1 and s2 in a new string */
+char		*ft_strjoin(char const *s1, char const *s2);
+
 /* return a string containing every string in strs
  * delimited by delim */
 char		*ft_strjoin_r(char **strs, const char *delim);

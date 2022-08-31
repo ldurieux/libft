@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*res;
+
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	res = malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (!res)
+		return (NULL);
+	ft_strcpy(res, s1);
+	ft_strcat(res, s2);
+	return (res);
+}
+
 char	*ft_strjoin_r(char **strs, const char *delim)
 {
 	size_t	total_len;
