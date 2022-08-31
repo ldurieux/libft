@@ -172,6 +172,9 @@ void		*ft_memcpy(void *dst, const void *src, size_t len);
  * or until chr is found
  * see man memccpy(3) */
 void		*ft_memccpy(void *dst, const void *src, int chr, size_t len);
+/* same as memcpy but dst and src may overlap
+ * see man memmove(3) */
+void		*ft_memmove(void *dst, const void *src, size_t len);
 
 /* fill a bloc of memory
  * see man memset(3) */
