@@ -27,7 +27,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	return (*r1 - *r2);
 }
 
-int	ft_strncmp(const char *s1, const char *s2, t_size n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	register const unsigned char	*r1 = (unsigned char *)s1;
 	register const unsigned char	*r2 = (unsigned char *)s2;
@@ -67,7 +67,7 @@ int	ft_stricmp(const char *s1, const char *s2)
 	return (a - b);
 }
 
-int	ft_strnicmp(const char *s1, const char *s2, t_size n)
+int	ft_strnicmp(const char *s1, const char *s2, size_t n)
 {
 	register const unsigned char	*r1 = (unsigned char *)s1;
 	register const unsigned char	*r2 = (unsigned char *)s2;

@@ -36,7 +36,6 @@
 # define STDOUT	1
 # define STDERR	2
 
-typedef unsigned long long	t_size;
 typedef unsigned char		t_bool;
 
 typedef unsigned long long	t_uintmax;
@@ -60,18 +59,18 @@ void		ft_putnbr(int value);
 /* --- STRING --- */
 /* return the length of str
  * see man strlen(3) */
-t_size		ft_strlen(const char *str);
-t_size		ft_strnlen(const char *str, t_size n);
+size_t		ft_strlen(const char *str);
+size_t		ft_strnlen(const char *str, size_t n);
 
-/* compare 2 stirngs and return 0 if they are equal
+/* compare 2 strings and return 0 if they are equal
  * a negative value if s1 < s2
  * a positive value otherwise
  * see man strcmp(3) */
 int			ft_strcmp(const char *s1, const char *s2);
-int			ft_strncmp(const char *s1, const char *s2, t_size n);
+int			ft_strncmp(const char *s1, const char *s2, size_t n);
 /* same but ignore case */
 int			ft_stricmp(const char *s1, const char *s2);
-int			ft_strnicmp(const char *s1, const char *s2, t_size n);
+int			ft_strnicmp(const char *s1, const char *s2, size_t n);
 
 /* find first or last occurence of chr in str
  * see man strchr(3) */
@@ -87,17 +86,17 @@ char		*ft_strrstr(const char *haystack, const char *needle);
 
 /* copy a string, see man strcpy(3) */
 char		*ft_strcpy(char	*dest, const char *src);
-char		*ft_strncpy(char *dest, const char *src, t_size n);
-t_size		ft_strlcpy(char *dest, const char *src, t_size size);
+char		*ft_strncpy(char *dest, const char *src, size_t n);
+size_t		ft_strlcpy(char *dest, const char *src, size_t size);
 
 /* duplicate a string, see man strdup(3) */
 char		*ft_strdup(const char *src);
-char		*ft_strndup(const char *src, t_size n);
+char		*ft_strndup(const char *src, size_t n);
 
 /* concatenate a string, see man strcat(3) */
 char		*ft_strcat(char *dest, const char *src);
-char		*ft_strncat(char *dest, const char *src, t_size n);
-t_size		ft_strlcat(char *dest, const char *src, t_size size);
+char		*ft_strncat(char *dest, const char *src, size_t n);
+size_t		ft_strlcat(char *dest, const char *src, size_t size);
 
 /* to lowercase */
 char		*ft_strlwr(char *str);
@@ -136,11 +135,11 @@ char		*ft_strsmp(char *str);
 /* count until a character in str is not
  * contained in accept and return the count
  * see man strspn(3) */
-t_size		ft_strspn(const char *str, const char *accept);
+size_t		ft_strspn(const char *str, const char *accept);
 
 /* count until a character in str is
  * contained in reject and return the count */
-t_size		ft_strcspn(const char *str, const char *reject);
+size_t		ft_strcspn(const char *str, const char *reject);
 
 /* return the first occurence of any chrs in str
  * see man strpbrk(3) */
@@ -148,7 +147,7 @@ char		*ft_strpbrk(const char *str, const char *chrs);
 
 /* return a string starting from after any delims
  * and ending before any delims
- * if nothing is nothing is found return NULL
+ * if nothing is found return NULL
  * see man strtok(3) */
 char		*ft_strtok_r(const char *str, const char *delims,
 				const char **save_ptr);
@@ -163,27 +162,27 @@ char		**ft_strsplit(const char *str, const char *delims);
 
 /* --- MEM ---*/
 /* swap 2 values of size size */
-void		ft_swap(void *a, void *b, t_size size);
+void		ft_swap(void *a, void *b, size_t size);
 
 /* copy a bloc of memory
  * dst and src MUST NOT overlap
  * see man memcpy(3) */
-void		*ft_memcpy(void *dst, const void *src, t_size len);
+void		*ft_memcpy(void *dst, const void *src, size_t len);
 
 /* fill a bloc of memory
  * see man memset(3) */
-void		*ft_memset(void *dst, t_uint8 value, t_size len);
+void		*ft_memset(void *dst, int value, size_t len);
 
 /* same as strstr but ignores '\0'
  * see man memmem(3) */
-void		*ft_memmem(const void *haystack, t_size haystack_len,
-				const void *needle, t_size needle_len);
-void		*ft_memrmem(const void *haystack, t_size haystack_len,
-				const void *needle, t_size needle_len);
+void		*ft_memmem(const void *haystack, size_t haystack_len,
+				const void *needle, size_t needle_len);
+void		*ft_memrmem(const void *haystack, size_t haystack_len,
+				const void *needle, size_t needle_len);
 
 /* allocate memory and fill it with 0
  * see man calloc(3) */
-void		*ft_calloc(t_size count, t_size size);
+void		*ft_calloc(size_t count, size_t size);
 
 /* --- INT STRING CONVERSION --- */
 /* ascii to integer
@@ -210,7 +209,7 @@ char		*ft_itoa(int value);
 char		*ft_ltoa(long value);
 char		*ft_lltoa(long long value);
 
-/* same as ito but specify base */
+/* same as itoa but specify base */
 char		*ft_itoa_base(int value, const char *base);
 char		*ft_ltoa_base(long value, const char *base);
 char		*ft_lltoa_base(long long value, const char *base);

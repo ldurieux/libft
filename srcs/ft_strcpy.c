@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char	*dest, const char *src)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (src[i])
@@ -26,9 +26,9 @@ char	*ft_strcpy(char	*dest, const char *src)
 	return (dest);
 }
 
-char	*ft_strncpy(char *dest, const char *src, t_size n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (*src && i < n)
@@ -38,9 +38,9 @@ char	*ft_strncpy(char *dest, const char *src, t_size n)
 	return (dest);
 }
 
-t_size	ft_strlcpy(char *dest, const char *src, t_size size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (*src && i < size - 1)

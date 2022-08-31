@@ -18,7 +18,7 @@
 
 // NOLINTBEGIN
 static const char	*strlen_aligned(const char *chr_ptr,
-	register t_size *lw_ptr, register t_size lw)
+	register size_t *lw_ptr, register size_t lw)
 {
 	while (1)
 	{
@@ -50,23 +50,23 @@ static const char	*strlen_aligned(const char *chr_ptr,
 /* first check unaligned bytes one by one
  * then do it by 8 bytes once we're aligned
 */
-t_size	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	const char	*chr_ptr;
 
 	chr_ptr = str;
-	while (((t_size)chr_ptr & ALIGN_CHECK) != 0)
+	while (((size_t)chr_ptr & ALIGN_CHECK) != 0)
 	{
 		if (*chr_ptr == '\0')
 			return (chr_ptr - str);
 		chr_ptr++;
 	}
-	return (strlen_aligned(chr_ptr, (t_size *)chr_ptr, 0) - str);
+	return (strlen_aligned(chr_ptr, (size_t *)chr_ptr, 0) - str);
 }
 
 // NOLINTBEGIN
 static const char	*strnlen_aligned(const char *chr_ptr,
-	register t_size *lw_ptr, register t_size lw, const char *max)
+	register size_t *lw_ptr, register size_t lw, const char *max)
 {
 	while ((char *)lw_ptr < max)
 	{
@@ -96,18 +96,18 @@ static const char	*strnlen_aligned(const char *chr_ptr,
 }
 // NOLINTEND
 
-t_size	ft_strnlen(const char *str, t_size n)
+size_t	ft_strnlen(const char *str, size_t n)
 {
 	const char	*chr_ptr;
-	t_size		len;
+	size_t		len;
 
 	chr_ptr = str;
-	while (((t_size)chr_ptr & ALIGN_CHECK) != 0 && (t_size)(chr_ptr - str) < n)
+	while (((size_t)chr_ptr & ALIGN_CHECK) != 0 && (size_t)(chr_ptr - str) < n)
 	{
 		if (*chr_ptr == '\0')
 			return (chr_ptr - str);
 		chr_ptr++;
 	}
-	len = strnlen_aligned(chr_ptr, (t_size *)chr_ptr, 0, str + n) - str;
+	len = strnlen_aligned(chr_ptr, (size_t *)chr_ptr, 0, str + n) - str;
 	return (len * (len < n) + n * (len >= n));
 }

@@ -14,7 +14,7 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	t_size	i;
+	size_t	i;
 
 	i = ft_strlen(dest);
 	while (*src)
@@ -23,10 +23,10 @@ char	*ft_strcat(char *dest, const char *src)
 	return (dest);
 }
 
-char	*ft_strncat(char *dest, const char *src, t_size n)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	t_size	i;
-	t_size	j;
+	size_t	i;
+	size_t	j;
 
 	i = ft_strlen(dest);
 	j = 0;
@@ -36,10 +36,10 @@ char	*ft_strncat(char *dest, const char *src, t_size n)
 	return (dest);
 }
 
-t_size	ft_strlcat(char *dest, const char *src, t_size size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	t_size	i;
-	t_size	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (dest[i] && i < size)

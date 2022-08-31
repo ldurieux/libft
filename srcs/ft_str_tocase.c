@@ -30,7 +30,7 @@ static inline t_bool	ft_is_alphanum(const char chr)
 
 char	*ft_strlwr(char *str)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -44,7 +44,7 @@ char	*ft_strlwr(char *str)
 
 char	*ft_strupr(char *str)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -59,7 +59,7 @@ char	*ft_strupr(char *str)
 char	*ft_strcap(char *str)
 {
 	t_bool	first_letter;
-	t_size	i;
+	size_t	i;
 	int		is_letter;
 
 	first_letter = 1;

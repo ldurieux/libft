@@ -14,7 +14,7 @@
 
 void	ft_putstr(const char *str)
 {
-	t_size	len;
+	size_t	len;
 
 	len = ft_strlen(str);
 	write(1, str, len);

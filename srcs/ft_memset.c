@@ -26,7 +26,7 @@ static inline t_uint64	make_mask(const t_uint8 value)
 	return (res);
 }
 
-void	*ft_memset(void *dst, t_uint8 value, t_size len)
+void	*ft_memset(void *dst, int value, size_t len)
 {
 	t_uint8		*c_ptr;
 	t_uint64	*i_ptr;

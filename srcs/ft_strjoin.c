@@ -14,10 +14,10 @@
 
 char	*ft_strjoin(char **strs, const char *delim)
 {
-	t_size	total_len;
-	t_size	delimiter_len;
-	t_size	i;
-	t_size	offset;
+	size_t	total_len;
+	size_t	delimiter_len;
+	size_t	i;
+	size_t	offset;
 	char	*res;
 
 	delimiter_len = ft_strlen(delim);

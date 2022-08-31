@@ -14,8 +14,8 @@
 
 char	*ft_strsmp(char *str)
 {
-	t_size	to_idx;
-	t_size	from_idx;
+	size_t	to_idx;
+	size_t	from_idx;
 
 	str = ft_strtrm(str);
 	from_idx = 0;

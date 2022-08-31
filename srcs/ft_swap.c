@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_swap(void *a, void *b, t_size size)
+void	ft_swap(void *a, void *b, size_t size)
 {
 	void	*tmp;
 

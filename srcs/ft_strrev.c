@@ -14,8 +14,8 @@
 
 char	*ft_strrev(char *str)
 {
-	t_size	len;
-	t_size	i;
+	size_t	len;
+	size_t	i;
 	char	swp;
 
 	len = ft_strlen(str);

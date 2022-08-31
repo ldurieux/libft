@@ -17,7 +17,7 @@ int	ft_atoi_base(const char *str, const char *base)
 	int			res;
 	t_ptrdiff	digit;
 	int			sign;
-	t_size		raddix;
+	size_t		raddix;
 
 	res = 0;
 	sign = 1;
@@ -43,7 +43,7 @@ long	ft_atol_base(const char *str, const char *base)
 	long		res;
 	t_ptrdiff	digit;
 	int			sign;
-	t_size		raddix;
+	size_t		raddix;
 
 	res = 0;
 	sign = 1;
@@ -69,7 +69,7 @@ long long	ft_atoll_base(const char *str, const char *base)
 	long long	res;
 	t_ptrdiff	digit;
 	int			sign;
-	t_size		raddix;
+	size_t		raddix;
 
 	res = 0;
 	sign = 1;

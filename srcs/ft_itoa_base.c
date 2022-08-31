@@ -22,7 +22,7 @@ char	*ft_itoa_base(int value, const char *base)
 	char	buf[INT_MAX_SIZE + 1];
 	char	*buf_ptr;
 	char	*res;
-	t_size	raddix;
+	size_t	raddix;
 
 	raddix = ft_strlen(base);
 	buf_ptr = &buf[INT_MAX_SIZE];
@@ -50,7 +50,7 @@ char	*ft_ltoa_base(long value, const char *base)
 	char	buf[LONG_MAX_SIZE + 1];
 	char	*buf_ptr;
 	char	*res;
-	t_size	raddix;
+	size_t	raddix;
 
 	raddix = ft_strlen(base);
 	buf_ptr = &buf[LONG_MAX_SIZE];
@@ -78,7 +78,7 @@ char	*ft_lltoa_base(long long value, const char *base)
 	char		buf[LLONG_MAX_SIZE + 1];
 	char		*buf_ptr;
 	char		*res;
-	t_size		raddix;
+	size_t		raddix;
 
 	raddix = ft_strlen(base);
 	buf_ptr = &buf[LLONG_MAX_SIZE];

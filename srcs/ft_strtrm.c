@@ -21,8 +21,8 @@ char	*ft_strtrm_lead(char *str)
 
 char	*ft_strtrm_trail(char *str)
 {
-	t_size	len;
-	t_size	i;
+	size_t	len;
+	size_t	i;
 
 	len = ft_strlen(str);
 	i = len - 1;

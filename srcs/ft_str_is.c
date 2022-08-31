@@ -14,7 +14,7 @@
 
 t_bool	ft_str_iswhitespace(const char *str)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -25,7 +25,7 @@ t_bool	ft_str_iswhitespace(const char *str)
 
 t_bool	ft_str_isalphanum(const char *str)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -41,7 +41,7 @@ t_bool	ft_str_isalphanum(const char *str)
 
 t_bool	ft_str_isalpha(const char *str)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -56,7 +56,7 @@ t_bool	ft_str_isalpha(const char *str)
 
 t_bool	ft_str_isdigit(const char *str)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -70,7 +70,7 @@ t_bool	ft_str_isdigit(const char *str)
 
 t_bool	ft_str_isprintable(const char *str)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])

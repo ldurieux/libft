@@ -20,9 +20,9 @@ static inline t_bool	ft_match_one_of(const char chr, const char *array)
 	return (0);
 }
 
-t_size	ft_strspn(const char *str, const char *accept)
+size_t	ft_strspn(const char *str, const char *accept)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (ft_match_one_of(str[i], accept))
@@ -30,9 +30,9 @@ t_size	ft_strspn(const char *str, const char *accept)
 	return (i);
 }
 
-t_size	ft_strcspn(const char *str, const char *reject)
+size_t	ft_strcspn(const char *str, const char *reject)
 {
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	while (!ft_match_one_of(str[i], reject))

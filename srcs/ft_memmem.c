@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-void	*ft_memmem(const void *haystack, t_size haystack_len,
-			const void *needle, t_size needle_len)
+void	*ft_memmem(const void *haystack, size_t haystack_len,
+			const void *needle, size_t needle_len)
 {
-	t_size		i;
+	size_t		i;
 	const void	*haystack_end;
 
 	if (!needle_len)
@@ -34,10 +34,10 @@ void	*ft_memmem(const void *haystack, t_size haystack_len,
 	return (NULL);
 }
 
-void	*ft_memrmem(const void *haystack, t_size haystack_len,
-				const void *needle, t_size needle_len)
+void	*ft_memrmem(const void *haystack, size_t haystack_len,
+				const void *needle, size_t needle_len)
 {
-	t_size		i;
+	size_t		i;
 	const void	*hs_copy;
 	const void	*haystack_end;
 
