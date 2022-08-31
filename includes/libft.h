@@ -168,6 +168,10 @@ void		ft_swap(void *a, void *b, size_t size);
  * dst and src MUST NOT overlap
  * see man memcpy(3) */
 void		*ft_memcpy(void *dst, const void *src, size_t len);
+/* copy until len character
+ * or until chr is found
+ * see man memccpy(3) */
+void		*ft_memccpy(void *dst, const void *src, int chr, size_t len);
 
 /* fill a bloc of memory
  * see man memset(3) */

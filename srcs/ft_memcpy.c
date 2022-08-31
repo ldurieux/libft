@@ -39,3 +39,20 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+
+void	*ft_memccpy(void *dst, const void *src, int chr, size_t len)
+{
+	size_t		i;
+	char		*c_dst;
+	const char	*c_src;
+
+	c_dst = dst;
+	c_src = src;
+	i = 0;
+	while (i < len && c_src[i] != chr)
+	{
+		c_dst[i] = c_src[i];
+		i++;
+	}
+	return (dst);
+}
