@@ -196,6 +196,10 @@ void		*ft_memrmem(const void *haystack, size_t haystack_len,
  * see man memchr(3) */
 void		*ft_memchr(const void *data, int chr, size_t len);
 
+/* same as strncmp but ignores '\0'
+ * see man memcmp(3) */
+int			ft_memcmp(const void *s1, const void *s2, size_t len);
+
 /* allocate memory and fill it with 0
  * see man calloc(3) */
 void		*ft_calloc(size_t count, size_t size);
