@@ -180,6 +180,9 @@ char		*ft_strjoin_r(char **strs, const char *delim);
  * delimited by any character contained in delims */
 char		**ft_strsplit(const char *str, const char *delims);
 
+/* same as ft_strplit but for only one character c */
+char		**ft_split(char const *s, char c);
+
 /* --- MEM ---*/
 /* swap 2 values of size size */
 void		ft_swap(void *a, void *b, size_t size);
