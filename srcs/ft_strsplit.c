@@ -38,6 +38,8 @@ static inline size_t	ft_count_words(const char *str, const char *delims)
 	return (count);
 }
 
+/* if ft_strtok_r fail it goes on
+ * free and return NULL in this case ? */
 char	**ft_split(char const *s, char c)
 {
 	size_t	words;
@@ -58,6 +60,8 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
+/* if ft_strtok_r fail it goes on
+ * free and return NULL in this case ? */
 char	**ft_strsplit(const char *str, const char *delims)
 {
 	size_t	words;

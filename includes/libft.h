@@ -183,6 +183,10 @@ char		**ft_strsplit(const char *str, const char *delims);
 /* same as ft_strplit but for only one character c */
 char		**ft_split(char const *s, char c);
 
+/* create a new string and fill it with
+ * applications of function f */
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
 /* --- MEM ---*/
 /* swap 2 values of size size */
 void		ft_swap(void *a, void *b, size_t size);
