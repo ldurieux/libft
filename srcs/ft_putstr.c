@@ -17,10 +17,10 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 
-void	ft_putstr(const char *str)
+void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	len;
 
-	len = ft_strlen(str);
-	write(1, str, len);
+	len = ft_strlen(s);
+	write(fd, s, len);
 }
