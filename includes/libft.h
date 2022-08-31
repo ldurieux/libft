@@ -173,6 +173,10 @@ void		*ft_memcpy(void *dst, const void *src, size_t len);
  * see man memset(3) */
 void		*ft_memset(void *dst, int value, size_t len);
 
+/* erase a bloc of memory
+ * see man bzero(3) */
+void		ft_bzero(void *dst, size_t len);
+
 /* same as strstr but ignores '\0'
  * see man memmem(3) */
 void		*ft_memmem(const void *haystack, size_t haystack_len,
