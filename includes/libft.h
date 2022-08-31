@@ -56,7 +56,7 @@ typedef long long			t_ptrdiff;
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
-void		ft_putnbr(int value);
+void		ft_putnbr_fd(int n, int fd);
 
 /* --- STRING --- */
 /* return the length of str
