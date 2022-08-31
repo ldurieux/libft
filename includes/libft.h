@@ -124,6 +124,9 @@ t_bool		ft_isalnum(int chr);
 t_bool		ft_isascii(int chr);
 t_bool		ft_isprint(int chr);
 
+int			ft_toupper(int chr);
+int			ft_tolower(int chr);
+
 /* trim str of leading whitespaces */
 char		*ft_strtrm_lead(char *str);
 

@@ -37,6 +37,7 @@ SRCS = \
 	srcs/ft_memchr.c \
 	srcs/ft_memcmp.c \
 	srcs/ft_chr_is.c \
+	srcs/ft_chr_tocase.c \
 
 HEADERS = includes/
 
