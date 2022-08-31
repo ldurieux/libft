@@ -172,6 +172,7 @@ void		*ft_memcpy(void *dst, const void *src, size_t len);
  * or until chr is found
  * see man memccpy(3) */
 void		*ft_memccpy(void *dst, const void *src, int chr, size_t len);
+
 /* same as memcpy but dst and src may overlap
  * see man memmove(3) */
 void		*ft_memmove(void *dst, const void *src, size_t len);
@@ -190,6 +191,10 @@ void		*ft_memmem(const void *haystack, size_t haystack_len,
 				const void *needle, size_t needle_len);
 void		*ft_memrmem(const void *haystack, size_t haystack_len,
 				const void *needle, size_t needle_len);
+
+/* same as strchr but ignores '\0'
+ * see man memchr(3) */
+void		*ft_memchr(const void *data, int chr, size_t len);
 
 /* allocate memory and fill it with 0
  * see man calloc(3) */
