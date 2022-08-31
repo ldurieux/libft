@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strjoin(char **strs, const char *delim)
+char	*ft_strjoin_r(char **strs, const char *delim)
 {
 	size_t	total_len;
 	size_t	delimiter_len;

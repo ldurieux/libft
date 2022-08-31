@@ -167,7 +167,7 @@ char		*ft_substr(char const *s, unsigned int start, size_t len);
 
 /* return a string containing every string in strs
  * delimited by delim */
-char		*ft_strjoin(char **strs, const char *delim);
+char		*ft_strjoin_r(char **strs, const char *delim);
 
 /* return an array of string contained in str
  * delimited by any character contained in delims */
