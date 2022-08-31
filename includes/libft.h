@@ -162,6 +162,9 @@ char		*ft_strpbrk(const char *str, const char *chrs);
 char		*ft_strtok_r(const char *str, const char *delims,
 				const char **save_ptr);
 
+/* returns a substring of s that is allocated */
+char		*ft_substr(char const *s, unsigned int start, size_t len);
+
 /* return a string containing every string in strs
  * delimited by delim */
 char		*ft_strjoin(char **strs, const char *delim);
