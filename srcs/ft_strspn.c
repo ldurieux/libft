@@ -30,6 +30,21 @@ size_t	ft_strspn(const char *str, const char *accept)
 	return (i);
 }
 
+size_t	ft_strrspn(const char *str, const char *accept)
+{
+	size_t		i;
+	const char	*cur_str;
+
+	cur_str = str + ft_strlen(str) - 1;
+	i = 0;
+	while (cur_str >= str && ft_match_one_of(*cur_str, accept))
+	{
+		i++;
+		cur_str--;
+	}
+	return (i);
+}
+
 size_t	ft_strcspn(const char *str, const char *reject)
 {
 	size_t	i;

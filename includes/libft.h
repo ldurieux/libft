@@ -136,6 +136,9 @@ char		*ft_strtrm_trail(char *str);
 /* trim str of leading and trailling whitespaces */
 char		*ft_strtrm(char *str);
 
+/* make a copy of s1 and trim it of any character in set */
+char		*ft_strtrim(char const *s1, char const *set);
+
 /* trim str whitespaces
  * then replace any whitespace by a space inside the string
  * if there are successive space characters in str
@@ -146,6 +149,7 @@ char		*ft_strsmp(char *str);
  * contained in accept and return the count
  * see man strspn(3) */
 size_t		ft_strspn(const char *str, const char *accept);
+size_t		ft_strrspn(const char *str, const char *accept);
 
 /* count until a character in str is
  * contained in reject and return the count */

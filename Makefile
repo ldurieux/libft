@@ -39,6 +39,7 @@ SRCS = \
 	srcs/ft_chr_is.c \
 	srcs/ft_chr_tocase.c \
 	srcs/ft_substr.c \
+	srcs/ft_strtrim.c \
 
 HEADERS = includes/
 
