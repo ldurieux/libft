@@ -74,8 +74,8 @@ int			ft_strnicmp(const char *s1, const char *s2, size_t n);
 
 /* find first or last occurence of chr in str
  * see man strchr(3) */
-char		*ft_strchr(const char *str, char chr);
-char		*ft_strrchr(const char *str, char chr);
+char		*ft_strchr(const char *str, int chr);
+char		*ft_strrchr(const char *str, int chr);
 
 /* find first or last offcurence of needle in haystack
  * if nothing is found return NULL
@@ -83,6 +83,7 @@ char		*ft_strrchr(const char *str, char chr);
  * see man strstr(3) */
 char		*ft_strstr(const char *haystack, const char *needle);
 char		*ft_strrstr(const char *haystack, const char *needle);
+char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 /* copy a string, see man strcpy(3) */
 char		*ft_strcpy(char	*dest, const char *src);

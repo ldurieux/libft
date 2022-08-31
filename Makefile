@@ -52,7 +52,7 @@ RM			= rm -Rf
 
 $(NAME) : $(OBJS) $(LIBDIR)
 		ar rc $(LIBDIR)/$@ $(OBJS)
-		#$(CC) $(CCFLAGS) $(DEPSFLAGS) -I$(HEADERS) -o $@ $(OBJS)
+		#$(CC) $(CCFLAGS) $(DEPSFLAGS) -I$(HEADERS) -o $@ $(OBJS) -lbsd
 
 $(LIBDIR) :
 		mkdir $(LIBDIR)

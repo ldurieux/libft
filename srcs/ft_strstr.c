@@ -49,3 +49,23 @@ char	*ft_strrstr(const char *haystack, const char *needle)
 	}
 	return (NULL);
 }
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	size_t		i;
+	const char	*end;
+
+	if (!needle[0])
+		return ((char *)haystack);
+	end = haystack - ft_strlen(needle) + len;
+	while (*haystack && haystack <= end)
+	{
+		i = 0;
+		while (haystack[i] == needle[i] && haystack[i])
+			i++;
+		if (!needle[i])
+			return ((char *)haystack);
+		haystack++;
+	}
+	return (NULL);
+}
