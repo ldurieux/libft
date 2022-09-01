@@ -278,6 +278,13 @@ char		*ft_convert_base(const char *str,
 t_uint64	ft_factorial(t_int64 value);
 t_int64		ft_power(t_int64 value, t_int64 power);
 
+/* --- LIST ---*/
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 /* --- INLINES --- */
 /* --- CHARACTER TYPE --- */
 static inline t_bool	ft_is_whitespace(const char chr)
