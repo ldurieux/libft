@@ -1,6 +1,6 @@
 libft
+libft.a
 main.c
-lib
 
 *.o
 *.d

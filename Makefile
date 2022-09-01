@@ -53,20 +53,16 @@ HEADERS = includes/
 OBJS		= ${SRCS:.c=.o}
 DEPS		= ${SRCS:.c=.d}
 CC			= gcc
-CCFLAGS		= -Wall -Wextra -g
+CCFLAGS		= -Wall -Wextra -Werror -g
 DEPSFLAGS	= -MMD -MP
-LIBDIR		= lib
 NAME		= libft.a
 RM			= rm -Rf
 
 .PHONY: all clean fclean re
 
-$(NAME) : $(OBJS) $(LIBDIR)
-		ar rc $(LIBDIR)/$@ $(OBJS)
+$(NAME) : $(OBJS)
+		ar rc $@ $(OBJS)
 		#$(CC) $(CCFLAGS) $(DEPSFLAGS) -I$(HEADERS) -o $@ $(OBJS) -lbsd
-
-$(LIBDIR) :
-		mkdir $(LIBDIR)
 
 all : $(NAME)
 
@@ -75,7 +71,6 @@ clean :
 
 fclean : clean
 		-$(RM) $(NAME)
-		-$(RM) $(LIBDIR)
 
 re : fclean all
 
