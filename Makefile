@@ -44,6 +44,7 @@ SRCS = \
 	srcs/ft_lstnew.c \
 	srcs/ft_lstadd.c \
 	srcs/ft_lstsize.c \
+	srcs/ft_lstlast.c \
 
 HEADERS = includes/
 
