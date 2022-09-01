@@ -43,6 +43,7 @@ SRCS = \
 	srcs/ft_strmapi.c \
 	srcs/ft_lstnew.c \
 	srcs/ft_lstadd.c \
+	srcs/ft_lstsize.c \
 
 HEADERS = includes/
 
