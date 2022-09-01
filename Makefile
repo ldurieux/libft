@@ -42,6 +42,7 @@ SRCS = \
 	srcs/ft_strtrim.c \
 	srcs/ft_strmapi.c \
 	srcs/ft_lstnew.c \
+	srcs/ft_lstadd.c \
 
 HEADERS = includes/
 
