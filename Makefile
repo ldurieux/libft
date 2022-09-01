@@ -41,6 +41,8 @@ SRCS = \
 	srcs/ft_substr.c \
 	srcs/ft_strtrim.c \
 	srcs/ft_strmapi.c \
+
+SRCS_BONUS = \
 	srcs/ft_lstnew.c \
 	srcs/ft_lstadd.c \
 	srcs/ft_lstsize.c \
@@ -51,30 +53,36 @@ SRCS = \
 HEADERS = includes/
 
 OBJS		= ${SRCS:.c=.o}
+OBJS_BONUS	= ${SRCS_BONUS:.c=.o}
 DEPS		= ${SRCS:.c=.d}
+DEPS_BONUS	= ${SRCS_BONUS:.c=.d}
 CC			= gcc
-CCFLAGS		= -Wall -Wextra -Werror -g
+CCFLAGS		= -Wall -Wextra -Werror
 DEPSFLAGS	= -MMD -MP
 NAME		= libft.a
 RM			= rm -Rf
+AR			= ar
+AR_FLAGS	= rc
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
 $(NAME) : $(OBJS)
-		ar rc $@ $(OBJS)
-		#$(CC) $(CCFLAGS) $(DEPSFLAGS) -I$(HEADERS) -o $@ $(OBJS) -lbsd
+		$(AR) $(AR_FLAGS) $@ $(OBJS)
+
+bonus : $(OBJS) $(OBJS_BONUS)
+		$(AR) $(AR_FLAGS) $(NAME) $(OBJS) $(OBJS_BONUS)
 
 all : $(NAME)
 
 clean :
-		-$(RM) $(OBJS) $(DEPS)
+		-$(RM) $(OBJS) $(DEPS) $(OBJS_BONUS) $(DEPS_BONUS)
 
 fclean : clean
 		-$(RM) $(NAME)
 
 re : fclean all
 
--include $(DEPS)
+-include $(DEPS) $(DEPS_BONUS)
 
 %.o : %.c Makefile
 		$(CC) $(CCFLAGS) $(DEPSFLAGS) -I$(HEADERS) -c $< -o $@
