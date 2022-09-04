@@ -182,7 +182,9 @@ char		*ft_strjoin_r(char **strs, const char *delim);
  * delimited by any character contained in delims */
 char		**ft_strsplit(const char *str, const char *delims);
 
-/* same as ft_strplit but for only one character c */
+/* same as ft_strplit but for only one character c
+ * and why is it not prefixed by str you ask
+ * ¯\_(ツ)_/¯ your guess is as good as mine */
 char		**ft_split(char const *s, char c);
 
 /* create a new string and fill it with

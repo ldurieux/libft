@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	char			*c_dst;
 	const char		*c_src;
 
+	if (!dst || !src)
+		return (NULL);
 	i = -1;
 	if ((t_uint64)dst % sizeof(t_uint64) == 0
 		&& (t_uint64)src % sizeof(t_uint64) == 0
@@ -29,14 +31,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 		i_src = (const t_uint64 *)src;
 		while (++i < len / sizeof(t_uint64))
 			i_dst[i] = i_src[i];
+		return (dst);
 	}
-	else
-	{
-		c_dst = (char *)dst;
-		c_src = (const char *)src;
-		while (++i < len)
-			c_dst[i] = c_src[i];
-	}
+	c_dst = (char *)dst;
+	c_src = (const char *)src;
+	while (++i < len)
+		c_dst[i] = c_src[i];
 	return (dst);
 }
 
@@ -46,6 +46,8 @@ void	*ft_memccpy(void *dst, const void *src, int chr, size_t len)
 	char		*c_dst;
 	const char	*c_src;
 
+	if (!dst || !src)
+		return (NULL);
 	c_dst = dst;
 	c_src = src;
 	i = 0;

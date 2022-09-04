@@ -14,9 +14,13 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t len)
 {
-	register const unsigned char	*r1 = (unsigned char *)s1;
-	register const unsigned char	*r2 = (unsigned char *)s2;
+	register const unsigned char	*r1;
+	register const unsigned char	*r2;
 
+	r1 = (unsigned char *)s1;
+	r2 = (unsigned char *)s2;
+	if (!r1 || !r2)
+		return ((int)(r1 - r2));
 	if (len == 0)
 		return (0);
 	while (*r1 == *r2 && len-- > 1)

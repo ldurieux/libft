@@ -16,6 +16,8 @@ void	ft_swap(void *a, void *b, size_t size)
 {
 	void	*tmp;
 
+	if (!a || !b)
+		return ;
 	tmp = malloc(size);
 	if (!tmp)
 		return ;

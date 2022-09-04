@@ -24,6 +24,8 @@ size_t	ft_strspn(const char *str, const char *accept)
 {
 	size_t	i;
 
+	if (!str || !accept)
+		return (0);
 	i = 0;
 	while (ft_match_one_of(str[i], accept))
 		i++;
@@ -35,6 +37,8 @@ size_t	ft_strrspn(const char *str, const char *accept)
 	size_t		i;
 	const char	*cur_str;
 
+	if (!str || !accept)
+		return (0);
 	cur_str = str + ft_strlen(str) - 1;
 	i = 0;
 	while (cur_str >= str && ft_match_one_of(*cur_str, accept))
@@ -49,6 +53,8 @@ size_t	ft_strcspn(const char *str, const char *reject)
 {
 	size_t	i;
 
+	if (!str || !reject)
+		return (0);
 	i = 0;
 	while (!ft_match_one_of(str[i], reject))
 		i++;

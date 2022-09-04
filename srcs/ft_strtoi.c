@@ -25,13 +25,14 @@ int	ft_strtoi(const char *str, char **end_ptr)
 	int	sign;
 	int	tmp;
 
+	if (!str)
+		return (0);
 	res = 0;
 	sign = 1;
 	while (ft_is_whitespace(*str))
 		str++;
 	if (*str == '+' || *str == '-')
-		if (*str++ == '-')
-			sign = -1;
+		sign -= -2 * (*str++ == '-');
 	while (ft_is_digit(*str))
 	{
 		tmp = res * BASE_10_LEN + (*str++ - '0') * sign;
@@ -53,13 +54,14 @@ long	ft_strtol(const char *str, char **end_ptr)
 	int		sign;
 	long	tmp;
 
+	if (!str)
+		return (0);
 	res = 0;
 	sign = 1;
 	while (ft_is_whitespace(*str))
 		str++;
 	if (*str == '+' || *str == '-')
-		if (*str++ == '-')
-			sign = -1;
+		sign -= -2 * (*str++ == '-');
 	while (ft_is_digit(*str))
 	{
 		tmp = res * BASE_10_LEN + (*str++ - '0') * (long)sign;
@@ -81,13 +83,14 @@ long long	ft_strtoll(const char *str, char **end_ptr)
 	int			sign;
 	long long	tmp;
 
+	if (!str)
+		return (0);
 	res = 0;
 	sign = 1;
 	while (ft_is_whitespace(*str))
 		str++;
 	if (*str == '+' || *str == '-')
-		if (*str++ == '-')
-			sign = -1;
+		sign -= -2 * (*str++ == '-');
 	while (ft_is_digit(*str))
 	{
 		tmp = res * BASE_10_LEN + (*str++ - '0') * (long long)sign;

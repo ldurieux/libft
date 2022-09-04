@@ -18,6 +18,8 @@ void	*ft_memmem(const void *haystack, size_t haystack_len,
 	size_t		i;
 	const void	*haystack_end;
 
+	if (!haystack || !needle)
+		return (NULL);
 	if (!needle_len)
 		return ((void *)haystack);
 	haystack_end = haystack + haystack_len;
@@ -41,6 +43,8 @@ void	*ft_memrmem(const void *haystack, size_t haystack_len,
 	const void	*hs_copy;
 	const void	*haystack_end;
 
+	if (!haystack || !needle)
+		return (NULL);
 	if (!needle_len)
 		return ((void *)haystack);
 	haystack_end = haystack + haystack_len;

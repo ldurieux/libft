@@ -32,6 +32,8 @@ char	*ft_strlwr(char *str)
 {
 	size_t	i;
 
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{
@@ -46,6 +48,8 @@ char	*ft_strupr(char *str)
 {
 	size_t	i;
 
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{
@@ -62,6 +66,8 @@ char	*ft_strcap(char *str)
 	size_t	i;
 	int		is_letter;
 
+	if (!str)
+		return (NULL);
 	first_letter = 1;
 	i = 0;
 	while (str[i])

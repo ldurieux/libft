@@ -16,6 +16,8 @@ t_bool	ft_check_numeric_base(const char *base)
 {
 	size_t	len;
 
+	if (!base)
+		return (0);
 	len = ft_strlen(base);
 	if (len < 2)
 		return (0);

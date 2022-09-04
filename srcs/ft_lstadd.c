@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
+	if (!alst || !new)
+		return ;
 	new->next = *alst;
 	*alst = new;
 }
@@ -22,6 +24,8 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*last;
 
+	if (!alst || !new)
+		return ;
 	last = *alst;
 	while (last->next)
 		last = last->next;

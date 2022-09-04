@@ -18,6 +18,8 @@ char	*ft_strrev(char *str)
 	size_t	i;
 	char	swp;
 
+	if (!str)
+		return (NULL);
 	len = ft_strlen(str);
 	i = 0;
 	while (i < len / 2)

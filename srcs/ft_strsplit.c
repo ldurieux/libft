@@ -38,8 +38,17 @@ static inline size_t	ft_count_words(const char *str, const char *delims)
 	return (count);
 }
 
-/* if ft_strtok_r fail it goes on
- * free and return NULL in this case ? */
+static inline char	**split_criterr(char **arr)
+{
+	size_t	idx;
+
+	idx = -1;
+	while (arr[++idx])
+		free(arr[idx]);
+	free(arr);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	words;
@@ -47,34 +56,44 @@ char	**ft_split(char const *s, char c)
 	char	delims[2];
 	char	**res;
 
+	if (!s)
+		return (NULL);
 	delims[0] = c;
 	delims[1] = '\0';
 	words = ft_count_words(s, delims);
 	res = malloc(sizeof(char *) * (words + 1));
 	if (!res)
 		return (NULL);
-	i = 0;
-	while (i < words)
-		res[i++] = ft_strtok_r(s, delims, &s);
+	i = -1;
+	while (++i < words)
+	{
+		res[i] = ft_strtok_r(s, delims, &s);
+		if (!res[i])
+			return (split_criterr(res));
+	}
 	res[i] = NULL;
 	return (res);
 }
 
-/* if ft_strtok_r fail it goes on
- * free and return NULL in this case ? */
 char	**ft_strsplit(const char *str, const char *delims)
 {
 	size_t	words;
 	size_t	i;
 	char	**res;
 
+	if (!str || !delims)
+		return (NULL);
 	words = ft_count_words(str, delims);
 	res = malloc(sizeof(char *) * (words + 1));
 	if (!res)
 		return (NULL);
-	i = 0;
-	while (i < words)
-		res[i++] = ft_strtok_r(str, delims, &str);
+	i = -1;
+	while (++i < words)
+	{
+		res[i] = ft_strtok_r(str, delims, &str);
+		if (!res[i])
+			return (split_criterr(res));
+	}
 	res[i] = NULL;
 	return (res);
 }

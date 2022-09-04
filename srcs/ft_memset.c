@@ -32,6 +32,8 @@ void	*ft_memset(void *dst, int value, size_t len)
 	t_uint64	*i_ptr;
 	t_uint64	mask;
 
+	if (!dst)
+		return (NULL);
 	i_ptr = (t_uint64 *) dst;
 	mask = make_mask(value);
 	while (len > BITS_IN_BYTE - 1)

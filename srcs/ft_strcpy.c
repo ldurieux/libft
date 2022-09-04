@@ -16,6 +16,8 @@ char	*ft_strcpy(char	*dest, const char *src)
 {
 	size_t	i;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
 	while (src[i])
 	{
@@ -30,6 +32,8 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	size_t	i;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
 	while (*src && i < n)
 		dest[i++] = *src++;
@@ -42,6 +46,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 
+	if (!dest || !src)
+		return (0);
 	i = 0;
 	while (*src && i < size - 1)
 		dest[i++] = *src++;

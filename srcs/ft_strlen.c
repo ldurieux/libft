@@ -54,6 +54,8 @@ size_t	ft_strlen(const char *str)
 {
 	const char	*chr_ptr;
 
+	if (!str)
+		return (0);
 	chr_ptr = str;
 	while (((size_t)chr_ptr & ALIGN_CHECK) != 0)
 	{
@@ -101,6 +103,8 @@ size_t	ft_strnlen(const char *str, size_t n)
 	const char	*chr_ptr;
 	size_t		len;
 
+	if (!str)
+		return (0);
 	chr_ptr = str;
 	while (((size_t)chr_ptr & ALIGN_CHECK) != 0 && (size_t)(chr_ptr - str) < n)
 	{

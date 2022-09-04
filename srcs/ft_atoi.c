@@ -24,6 +24,8 @@ int	ft_atoi(const char *str)
 	int	res;
 	int	sign;
 
+	if (!str)
+		return (0);
 	res = 0;
 	sign = 1;
 	while (ft_is_whitespace(*str))
@@ -46,6 +48,8 @@ long	ft_atol(const char *str)
 	long	res;
 	int		sign;
 
+	if (!str)
+		return (0);
 	res = 0;
 	sign = 1;
 	while (ft_is_whitespace(*str))
@@ -63,6 +67,8 @@ long long	ft_atoll(const char *str)
 	long long	res;
 	int			sign;
 
+	if (!str)
+		return (0);
 	res = 0;
 	sign = 1;
 	while (ft_is_whitespace(*str))

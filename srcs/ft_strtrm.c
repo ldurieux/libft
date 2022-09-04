@@ -14,6 +14,8 @@
 
 char	*ft_strtrm_lead(char *str)
 {
+	if (!str)
+		return (NULL);
 	while (ft_is_whitespace(*str))
 		str++;
 	return (str);
@@ -24,6 +26,8 @@ char	*ft_strtrm_trail(char *str)
 	size_t	len;
 	size_t	i;
 
+	if (!str)
+		return (NULL);
 	len = ft_strlen(str);
 	i = len - 1;
 	while (i > 0 && ft_is_whitespace(str[i]))
@@ -37,6 +41,8 @@ char	*ft_strtrm_trail(char *str)
 
 char	*ft_strtrm(char *str)
 {
+	if (!str)
+		return (NULL);
 	str = ft_strtrm_lead(str);
 	str = ft_strtrm_trail(str);
 	return (str);

@@ -19,6 +19,8 @@ int	ft_atoi_base(const char *str, const char *base)
 	int			sign;
 	size_t		raddix;
 
+	if (!str || !base)
+		return (0);
 	res = 0;
 	sign = 1;
 	raddix = ft_strlen(base);
@@ -45,6 +47,8 @@ long	ft_atol_base(const char *str, const char *base)
 	int			sign;
 	size_t		raddix;
 
+	if (!str || !base)
+		return (0);
 	res = 0;
 	sign = 1;
 	raddix = ft_strlen(base);
@@ -71,6 +75,8 @@ long long	ft_atoll_base(const char *str, const char *base)
 	int			sign;
 	size_t		raddix;
 
+	if (!str || !base)
+		return (0);
 	res = 0;
 	sign = 1;
 	raddix = ft_strlen(base);

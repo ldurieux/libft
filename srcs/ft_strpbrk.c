@@ -22,6 +22,8 @@ static inline t_bool	ft_match_one_of(const char chr, const char *array)
 
 char	*ft_strpbrk(const char *str, const char *chrs)
 {
+	if (!str || !chrs)
+		return (NULL);
 	while (*str)
 		if (ft_match_one_of(*str++, chrs))
 			return ((char *)str - 1);

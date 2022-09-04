@@ -14,6 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
+	if (!del)
+		return ;
 	while (lst)
 	{
 		f(lst->content);
@@ -27,7 +29,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*last;
 	t_list	*tmp;
 
-	(void)del;
+	if (!lst || !f || !del)
+		return (NULL);
 	res = NULL;
 	last = NULL;
 	while (lst)

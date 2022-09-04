@@ -16,6 +16,8 @@ char	*ft_convert_base(const char *str, const char *from, const char *to)
 {
 	t_int64	value;
 
+	if (!str || !from || !to)
+		return (NULL);
 	if (!(ft_check_numeric_base(from) && ft_check_numeric_base(to)))
 		return (NULL);
 	value = ft_atoll_base(str, from);

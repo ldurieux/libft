@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s2_len;
 	char	*res;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	res = malloc(sizeof(char) * (s1_len + s2_len + 1));
@@ -28,6 +30,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (res);
 }
 
+static inline size_t	join_r_init(size_t *total_len, size_t *offset,
+									size_t *i, const char *delim)
+{
+	*total_len = 0;
+	*offset = 0;
+	*i = -1;
+	return (ft_strlen(delim));
+}
+
 char	*ft_strjoin_r(char **strs, const char *delim)
 {
 	size_t	total_len;
@@ -36,9 +47,9 @@ char	*ft_strjoin_r(char **strs, const char *delim)
 	size_t	offset;
 	char	*res;
 
-	delimiter_len = ft_strlen(delim);
-	total_len = 0;
-	i = -1;
+	if (!strs || !delim)
+		return (NULL);
+	delimiter_len = join_r_init(&total_len, &offset, &i, delim);
 	while (strs[++i])
 		total_len += ft_strlen(strs[i]) + delimiter_len;
 	total_len -= delimiter_len * (total_len > 0);
@@ -46,7 +57,6 @@ char	*ft_strjoin_r(char **strs, const char *delim)
 	if (!res)
 		return (NULL);
 	i = -1;
-	offset = 0;
 	while (strs[++i])
 	{
 		offset += ft_strlcpy(&res[offset], strs[i], total_len + 1);

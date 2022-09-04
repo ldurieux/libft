@@ -18,6 +18,8 @@ char	*ft_strtok_r(const char *str, const char *delims,
 	const char	*end;
 	char		*res;
 
+	if (!str || !delims)
+		return (NULL);
 	str += ft_strspn(str, delims);
 	end = ft_strpbrk(str, delims);
 	if (!end)
@@ -25,6 +27,7 @@ char	*ft_strtok_r(const char *str, const char *delims,
 	if (end - str == 0)
 		return (NULL);
 	res = ft_strndup(str, end - str);
-	*save_ptr = end;
+	if (save_ptr)
+		*save_ptr = end;
 	return (res);
 }
