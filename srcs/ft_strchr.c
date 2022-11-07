@@ -16,12 +16,15 @@ char	*ft_strchr(const char *str, int chr)
 {
 	if (!str)
 		return (NULL);
+	chr %= 256;
 	while (*str)
 	{
 		if (*str == chr)
 			return ((char *)str);
 		str++;
 	}
+	if (chr == 0)
+		return ((char *)str);
 	return (NULL);
 }
 
@@ -31,7 +34,10 @@ char	*ft_strrchr(const char *str, int chr)
 
 	if (!str)
 		return (NULL);
+	chr %= 256;
 	str_cp = str + ft_strlen(str) - 1;
+	if (chr == 0)
+		return ((char *)str_cp + 1);
 	while (str_cp >= str)
 	{
 		if (*str_cp == chr)

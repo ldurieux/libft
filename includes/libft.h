@@ -187,6 +187,9 @@ char		**ft_strsplit(const char *str, const char *delims);
  * ¯\_(ツ)_/¯ your guess is as good as mine */
 char		**ft_split(char const *s, char c);
 
+/* call function f on each characters of s */
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+
 /* create a new string and fill it with
  * applications of function f */
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));

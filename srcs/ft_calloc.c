@@ -19,6 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 	t_uint64	*i_ptr;
 	size_t		mem_size;
 
+	if (count > ULLONG_MAX - size)
+		return (NULL);
 	mem_size = count * size;
 	res = malloc(mem_size);
 	if (!res)
