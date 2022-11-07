@@ -28,7 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
-	ft_strncpy(res, s + start, len);
+	if (len != 0)
+		ft_strncpy(res, s + start, len);
 	res[len] = '\0';
 	return (res);
 }
