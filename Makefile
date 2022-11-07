@@ -43,6 +43,7 @@ SRCS		= \
 			  srcs/ft_substr.c \
 			  srcs/ft_strtrim.c \
 			  srcs/ft_strmapi.c \
+			  srcs/ft_striteri.c \
 
 SRCS_BONUS	= \
 			  srcs/ft_lstnew.c \
