@@ -68,7 +68,7 @@ OBJS		= ${SRCS:.c=.o} $(ASMSRCS:.asm=.o)
 OBJS_BONUS	= ${SRCS_BONUS:.c=.o}
 DEPS		= ${SRCS:.c=.d}
 DEPS_BONUS	= ${SRCS_BONUS:.c=.d}
-CC			= gcc -no-pie
+CC			= cc
 CCWFLGS		= -Wall -Wextra -Werror
 CCDBGFLGS	= -fsanitize=address -g
 CCO1FLGS	= -O1 -march=native
@@ -85,7 +85,7 @@ NASMFLAGS	= -felf64
 .PHONY: all clean fclean re bonus
 
 $(NAME) : $(LIB_PATHS) $(OBJS)
-		$(AR) $(ARFLAGS) $@ $(OBJS)
+		$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
 bonus : $(OBJS) $(OBJS_BONUS)
 		$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(OBJS_BONUS)

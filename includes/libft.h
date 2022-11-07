@@ -120,11 +120,11 @@ t_bool		ft_str_isalpha(const char *str);
 t_bool		ft_str_isdigit(const char *str);
 t_bool		ft_str_isprintable(const char *str);
 
-t_bool		ft_isalpha(int chr);
-t_bool		ft_isdigit(int chr);
-t_bool		ft_isalnum(int chr);
-t_bool		ft_isascii(int chr);
-t_bool		ft_isprint(int chr);
+int			ft_isalpha(int chr);
+int			ft_isdigit(int chr);
+int			ft_isalnum(int chr);
+int			ft_isascii(int chr);
+int			ft_isprint(int chr);
 
 int			ft_toupper(int chr);
 int			ft_tolower(int chr);
@@ -309,7 +309,7 @@ static inline t_bool	ft_is_whitespace(const char chr)
 static inline t_uint64	ft_abs(t_int64 value)
 {
 	return (
-		value * ((value > 0) * 2 - 1)
+		(t_uint64)(value * ((value > 0) * 2 - 1))
 	);
 }
 
