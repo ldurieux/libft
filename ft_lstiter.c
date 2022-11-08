@@ -22,28 +22,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
-{
-	t_list	*res;
-	t_list	*last;
-	t_list	*tmp;
-
-	if (!lst || !f || !del)
-		return (NULL);
-	res = NULL;
-	last = NULL;
-	while (lst)
-	{
-		tmp = ft_lstnew(f(lst->content));
-		if (!tmp)
-			return (NULL);
-		lst = lst->next;
-		if (!last)
-			res = tmp;
-		else
-			last->next = tmp;
-		last = tmp;
-	}
-	return (res);
-}

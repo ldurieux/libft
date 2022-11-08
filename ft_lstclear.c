@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurieux <ldurieux@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: ldurieux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/11 12:12:53 by ldurieux          #+#    #+#             */
-/*   Updated: 2022/08/11 12:12:54 by ldurieux         ###   ########lyon.fr   */
+/*   Created: 2022/11/08 14:44:00 by ldurieux          #+#    #+#             */
+/*   Updated: 2022/11/08 14:44:01 by ldurieux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	write(fd, &c, 1);
-}
+	t_list	*it;
+	t_list	*next;
 
-void	ft_putstr_fd(char *s, int fd)
-{
-	size_t	len;
-
-	if (!s)
+	if (!lst || !del)
 		return ;
-	len = ft_strlen(s);
-	write(fd, s, len);
-}
-
-void	ft_putendl_fd(char *s, int fd)
-{
-	if (!s)
-		return ;
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	it = *lst;
+	while (it)
+	{
+		del(it->content);
+		next = it->next;
+		free(it);
+		it = next;
+	}
+	*lst = NULL;
 }

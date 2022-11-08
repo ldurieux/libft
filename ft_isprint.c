@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_chr_tocase.c                                    :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurieux <ldurieux@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: ldurieux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 11:50:11 by ldurieux          #+#    #+#             */
-/*   Updated: 2022/08/31 11:50:12 by ldurieux         ###   ########lyon.fr   */
+/*   Created: 2022/11/08 14:43:30 by ldurieux          #+#    #+#             */
+/*   Updated: 2022/11/08 14:43:37 by ldurieux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#define CASE_OFFSET	32
-
-int	ft_toupper(int chr)
+int	ft_isprint(int chr)
 {
-	if (chr >= 'a' && chr <= 'z')
-		return (chr - CASE_OFFSET);
-	return (chr);
-}
-
-int	ft_tolower(int chr)
-{
-	if (chr >= 'A' && chr <= 'Z')
-		return (chr + CASE_OFFSET);
-	return (chr);
+	return (chr <= '~' && chr >= ' ');
 }

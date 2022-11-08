@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurieux <ldurieux@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: ldurieux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/12 00:29:07 by ldurieux          #+#    #+#             */
-/*   Updated: 2022/08/12 00:29:08 by ldurieux         ###   ########lyon.fr   */
+/*   Created: 2022/11/08 14:45:00 by ldurieux          #+#    #+#             */
+/*   Updated: 2022/11/08 14:45:01 by ldurieux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int chr)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	if (!str)
-		return (NULL);
-	chr = (unsigned char)chr;
-	while (*str)
-	{
-		if (*str == chr)
-			return ((char *)str);
-		str++;
-	}
-	if (chr == 0)
-		return ((char *)str);
-	return (NULL);
+	size_t	i;
+
+	if (!dest || !src)
+		return (0);
+	i = 0;
+	while (*src && i + 1 < size)
+		dest[i++] = *src++;
+	if (size > 0)
+		dest[i] = '\0';
+	while (*src++)
+		i++;
+	return (i);
 }

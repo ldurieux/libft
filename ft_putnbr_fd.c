@@ -31,5 +31,5 @@ void	ft_putnbr_fd(int n, int fd)
 	copy = (n < 0) * '-' + (n == 0) * '0';
 	if (copy)
 		*buf_ptr-- = (char)copy;
-	write(fd, buf_ptr + 1, &buf[INT_MAX_SIZE] - buf_ptr);
+	write(fd, buf_ptr + 1, (size_t)(&buf[INT_MAX_SIZE] - buf_ptr));
 }

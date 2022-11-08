@@ -1,57 +1,73 @@
 NAME		= libft.a
 
 SRCS		= \
-			  ft_strlen.c \
-			  ft_memcpy.c \
-			  ft_strcmp.c \
-			  ft_putstr.c \
+			  ft_putchar_fd.c \
+			  ft_putendl_fd.c \
+			  ft_putnbr_fd.c \
+			  ft_putstr_fd.c \
+			  ft_split.c \
+			  ft_strnstr.c \
+			  ft_tolower.c \
+			  ft_toupper.c \
+			  ft_isalnum.c \
+			  ft_isalpha.c \
+			  ft_isascii.c \
+			  ft_isdigit.c \
+			  ft_isprint.c \
+			  ft_strlcat.c \
+			  ft_strlcpy.c \
+			  ft_strncmp.c \
+			  ft_strrchr.c \
 			  ft_atoi.c \
-			  ft_itoa.c \
-			  ft_convert_base.c \
-			  ft_calloc.c \
-			  ft_strstr.c \
-			  ft_strcpy.c \
-			  ft_strcat.c \
-			  ft_str_tocase.c \
-			  ft_str_is.c \
-			  ft_swap.c \
-			  ft_factorial.c \
-			  ft_power.c \
-			  ft_strtrm.c \
-			  ft_strsmp.c \
-			  ft_strjoin.c \
-			  ft_strtoi.c \
-			  ft_strdup.c \
-			  ft_strspn.c \
-			  ft_strtok.c \
-			  ft_strpbrk.c \
-			  ft_strsplit.c \
-			  ft_strrev.c \
-			  ft_strchr.c \
-			  ft_memset.c \
-			  ft_putnbr.c \
-			  ft_check_numeric_base.c \
 			  ft_atoi_base.c \
-			  ft_itoa_base.c \
-			  ft_memmem.c \
 			  ft_bzero.c \
-			  ft_memmove.c \
+			  ft_calloc.c \
+			  ft_check_numeric_base.c \
+			  ft_convert_base.c \
+			  ft_factorial.c \
+			  ft_itoa.c \
+			  ft_itoa_base.c \
 			  ft_memchr.c \
 			  ft_memcmp.c \
-			  ft_chr_is.c \
-			  ft_chr_tocase.c \
-			  ft_substr.c \
-			  ft_strtrim.c \
-			  ft_strmapi.c \
+			  ft_memcpy.c \
+			  ft_memmem.c \
+			  ft_memmove.c \
+			  ft_memset.c \
+			  ft_power.c \
+			  ft_str_is.c \
+			  ft_str_tocase.c \
+			  ft_strcat.c \
+			  ft_strchr.c \
+			  ft_strcmp.c \
+			  ft_strcpy.c \
+			  ft_strdup.c \
 			  ft_striteri.c \
+			  ft_strjoin.c \
+			  ft_strlen.c \
+			  ft_strmapi.c \
+			  ft_strpbrk.c \
+			  ft_strrev.c \
+			  ft_strsmp.c \
+			  ft_strsplit.c \
+			  ft_strspn.c \
+			  ft_strstr.c \
+			  ft_strtoi.c \
+			  ft_strtok.c \
+			  ft_strtrim.c \
+			  ft_strtrm.c \
+			  ft_substr.c \
+			  ft_swap.c \
 
 SRCS_BONUS	= \
-			  ft_lstnew.c \
-			  ft_lstadd.c \
-			  ft_lstsize.c \
-			  ft_lstlast.c \
-			  ft_lstdel.c \
+			  ft_lstadd_back.c \
+			  ft_lstadd_front.c \
+			  ft_lstclear.c \
+			  ft_lstdelone.c \
+			  ft_lstmap.c \
 			  ft_lstiter.c \
+			  ft_lstlast.c \
+			  ft_lstnew.c \
+			  ft_lstsize.c \
 
 ASMSRCS		= \
 

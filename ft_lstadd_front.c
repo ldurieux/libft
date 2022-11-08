@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldurieux <ldurieux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 13:52:40 by ldurieux          #+#    #+#             */
-/*   Updated: 2022/09/01 13:52:40 by ldurieux         ###   ########lyon.fr   */
+/*   Created: 2022/09/01 13:41:24 by ldurieux          #+#    #+#             */
+/*   Updated: 2022/09/01 13:41:25 by ldurieux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	if (!lst || !del)
+	if (!alst || !new)
 		return ;
-	del(lst->content);
-	free(lst);
-}
-
-void	ft_lstclear(t_list **lst, void (*del)(void*))
-{
-	t_list	*it;
-	t_list	*next;
-
-	if (!lst || !del)
-		return ;
-	it = *lst;
-	while (it)
-	{
-		del(it->content);
-		next = it->next;
-		free(it);
-		it = next;
-	}
-	*lst = NULL;
+	new->next = *alst;
+	*alst = new;
 }

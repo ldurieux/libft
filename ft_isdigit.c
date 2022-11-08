@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurieux <ldurieux@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: ldurieux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/12 00:29:07 by ldurieux          #+#    #+#             */
-/*   Updated: 2022/08/12 00:29:08 by ldurieux         ###   ########lyon.fr   */
+/*   Created: 2022/11/08 14:43:27 by ldurieux          #+#    #+#             */
+/*   Updated: 2022/11/08 14:43:28 by ldurieux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int chr)
+int	ft_isdigit(int chr)
 {
-	if (!str)
-		return (NULL);
-	chr = (unsigned char)chr;
-	while (*str)
-	{
-		if (*str == chr)
-			return ((char *)str);
-		str++;
-	}
-	if (chr == 0)
-		return ((char *)str);
-	return (NULL);
+	return (chr >= '0' && chr <= '9');
 }
