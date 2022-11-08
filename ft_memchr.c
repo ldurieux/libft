@@ -14,12 +14,12 @@
 
 void	*ft_memchr(const void *data, int chr, size_t len)
 {
-	size_t	i;
-	char	*c_data;
+	size_t			i;
+	unsigned char	*c_data;
 
 	if (!data)
 		return (NULL);
-	c_data = (char *)data;
+	c_data = (unsigned char *)data;
 	chr %= 256;
 	i = (size_t)-1;
 	while (++i < len)
