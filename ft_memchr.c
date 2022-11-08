@@ -20,7 +20,7 @@ void	*ft_memchr(const void *data, int chr, size_t len)
 	if (!data)
 		return (NULL);
 	c_data = (unsigned char *)data;
-	chr %= 256;
+	chr = (unsigned char)chr;
 	i = (size_t)-1;
 	while (++i < len)
 	{

@@ -79,7 +79,7 @@ DEPSFLAGS	= -MMD -MP
 RM			= rm -f
 MAKE		= make -C
 AR			= ar
-ARFLAGS		= rc
+ARFLAGS		= rcs
 NASM		= nasm
 NASMFLAGS	= -felf64
 

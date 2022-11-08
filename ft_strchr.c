@@ -16,7 +16,7 @@ char	*ft_strchr(const char *str, int chr)
 {
 	if (!str)
 		return (NULL);
-	chr %= 256;
+	chr = (unsigned char)chr;
 	while (*str)
 	{
 		if (*str == chr)
@@ -34,7 +34,7 @@ char	*ft_strrchr(const char *str, int chr)
 
 	if (!str)
 		return (NULL);
-	chr %= 256;
+	chr = (unsigned char)chr;
 	str_cp = str + ft_strlen(str) - 1;
 	if (chr == 0)
 		return ((char *)str_cp + 1);
