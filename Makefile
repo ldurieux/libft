@@ -74,7 +74,7 @@ ASMSRCS		= \
 LIB_NAMES	= \
 
 HEADERS		= \
-			  includes \
+			  . \
 
 LIBS		= $(subst lib,-l,$(notdir $(LIB_NAMES)))
 LIB_LD		= $(foreach lib,$(LIB_NAMES),-L$(lib))
