@@ -126,4 +126,4 @@ re : fclean all
 -include $(DEPS)
 
 %.o : %.c Makefile
-		$(CC) $(CCWFLAGS) $(DEPSFLAGS) -I$(HEADERS) $(LIB_HEADERS) -c $< -o $@ $(LIB_LD) $(LIBS)
+		$(CC) $(CCWFLGS) $(DEPSFLAGS) -I$(HEADERS) $(LIB_HEADERS) -c $< -o $@ $(LIB_LD) $(LIBS)
