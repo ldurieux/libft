@@ -113,7 +113,7 @@ $(LIB_PATHS) :
 all : $(NAME)
 
 clean :
-		-$(RM) $(OBJS) $(DEPS)
+		-$(RM) $(OBJS) $(DEPS) $(OBJS_BONUS) $(DEPS_BONUS)
 
 fclean : clean
 		-$(RM) $(NAME)
