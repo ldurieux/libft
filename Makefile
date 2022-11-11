@@ -99,7 +99,7 @@ ARFLAGS		= rcs
 NASM		= nasm
 NASMFLAGS	= -felf64
 
-.PHONY: all clean fclean re bonus
+all : $(NAME)
 
 $(NAME) : $(LIB_PATHS) $(OBJS)
 		$(AR) $(ARFLAGS) $(NAME) $(OBJS)
@@ -109,8 +109,6 @@ bonus : $(OBJS) $(OBJS_BONUS)
 
 $(LIB_PATHS) :
 		$(MAKE) $(dir $@)
-
-all : $(NAME)
 
 clean :
 		-$(RM) $(OBJS) $(DEPS) $(OBJS_BONUS) $(DEPS_BONUS)
@@ -127,3 +125,5 @@ re : fclean all
 
 %.o : %.c Makefile
 		$(CC) $(CCWFLGS) $(DEPSFLAGS) -I$(HEADERS) $(LIB_HEADERS) -c $< -o $@ $(LIB_LD) $(LIBS)
+
+.PHONY: all clean fclean re bonus
