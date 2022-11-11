@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 
 long	ft_atol(const char *str)
 {
-	return ((long)ft_strtol(str, NULL));
+	return (ft_strtol(str, NULL));
 }
 
 long long	ft_atoll(const char *str)
