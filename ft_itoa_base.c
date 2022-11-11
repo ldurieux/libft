@@ -42,7 +42,7 @@ char	*ft_itoa_base(int value, const char *base)
 	tmp = value;
 	while (tmp != 0)
 	{
-		*buf_ptr-- = base[ft_abs(tmp % (t_int64)raddix)];
+		*buf_ptr-- = base[ft_abs(tmp % (int64_t)raddix)];
 		tmp /= (int)raddix;
 	}
 	tmp = (value < 0) * '-' + (value == 0) * base[0];
@@ -66,7 +66,7 @@ char	*ft_ltoa_base(long value, const char *base)
 	tmp = value;
 	while (tmp != 0)
 	{
-		*buf_ptr-- = base[ft_abs(tmp % (t_int64)raddix)];
+		*buf_ptr-- = base[ft_abs(tmp % (int64_t)raddix)];
 		tmp /= (long)raddix;
 	}
 	tmp = (value < 0) * '-' + (value == 0) * base[0];
@@ -90,7 +90,7 @@ char	*ft_lltoa_base(long long value, const char *base)
 	tmp = value;
 	while (tmp != 0)
 	{
-		*buf_ptr-- = base[ft_abs(tmp % (t_int64)raddix)];
+		*buf_ptr-- = base[ft_abs(tmp % (int64_t)raddix)];
 		tmp /= (long long)raddix;
 	}
 	tmp = (value < 0) * '-' + (value == 0) * base[0];

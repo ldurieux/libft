@@ -33,7 +33,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 
 static unsigned char	ft_chrlwr(unsigned char c)
 {
-	t_bool	cmp;
+	int	cmp;
 
 	cmp = (c >= 'A') * (c <= 'Z');
 	return (c + (unsigned char)(CASE_OFFSET * cmp));

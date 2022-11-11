@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-t_int64	ft_power(t_int64 value, t_int64 power)
+int64_t	ft_power(int64_t value, int64_t power)
 {
-	t_int64	res;
+	int64_t	res;
 
 	if (power < 0)
 		return (0);

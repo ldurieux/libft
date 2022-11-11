@@ -14,10 +14,10 @@
 
 #define BITS_IN_BYTE 8
 
-static t_uint64	make_mask(const t_uint8 value)
+static uint64_t	make_mask(const uint8_t value)
 {
-	t_uint64	res;
-	t_uint8		i;
+	uint64_t	res;
+	uint8_t		i;
 
 	res = 0;
 	i = 0;
@@ -28,21 +28,21 @@ static t_uint64	make_mask(const t_uint8 value)
 
 void	*ft_memset(void *dst, int value, size_t len)
 {
-	t_uint8		*c_ptr;
-	t_uint64	*i_ptr;
-	t_uint64	mask;
+	uint8_t		*c_ptr;
+	uint64_t	*i_ptr;
+	uint64_t	mask;
 
 	if (!dst)
 		return (NULL);
-	i_ptr = (t_uint64 *) dst;
-	mask = make_mask((t_uint8)value);
+	i_ptr = (uint64_t *) dst;
+	mask = make_mask((uint8_t)value);
 	while (len > BITS_IN_BYTE - 1)
 	{
 		*i_ptr++ = mask;
 		len -= BITS_IN_BYTE;
 	}
-	c_ptr = (t_uint8 *) i_ptr;
+	c_ptr = (uint8_t *) i_ptr;
 	while (len-- > 0)
-		*c_ptr++ = (t_uint8)value;
+		*c_ptr++ = (uint8_t)value;
 	return (dst);
 }

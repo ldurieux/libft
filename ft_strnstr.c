@@ -22,8 +22,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (!needle[0])
 		return ((char *)haystack);
 	end = haystack - ft_strlen(needle);
-	if ((size_t)end > ULLONG_MAX - len)
-		end = (char *)ULLONG_MAX;
+	if ((size_t)end > SIZE_MAX - len)
+		end = (char *)SIZE_MAX;
 	else
 		end += len;
 	while (*haystack && haystack <= end)

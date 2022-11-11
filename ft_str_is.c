@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-t_bool	ft_str_iswhitespace(const char *str)
+int	ft_str_iswhitespace(const char *str)
 {
 	size_t	i;
 
@@ -25,7 +25,7 @@ t_bool	ft_str_iswhitespace(const char *str)
 	return (1);
 }
 
-t_bool	ft_str_isalphanum(const char *str)
+int	ft_str_isalphanum(const char *str)
 {
 	size_t	i;
 
@@ -43,7 +43,7 @@ t_bool	ft_str_isalphanum(const char *str)
 	return (1);
 }
 
-t_bool	ft_str_isalpha(const char *str)
+int	ft_str_isalpha(const char *str)
 {
 	size_t	i;
 
@@ -60,7 +60,7 @@ t_bool	ft_str_isalpha(const char *str)
 	return (1);
 }
 
-t_bool	ft_str_isdigit(const char *str)
+int	ft_str_isdigit(const char *str)
 {
 	size_t	i;
 
@@ -76,7 +76,7 @@ t_bool	ft_str_isdigit(const char *str)
 	return (1);
 }
 
-t_bool	ft_str_isprintable(const char *str)
+int	ft_str_isprintable(const char *str)
 {
 	size_t	i;
 

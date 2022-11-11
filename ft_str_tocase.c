@@ -23,7 +23,7 @@ static int	ft_is_letter(const char chr)
 	return ((chr >= 'a' && chr <= 'z') * -1 + (chr >= 'A' && chr <= 'Z'));
 }
 
-static t_bool	ft_is_alphanum(const char chr)
+static int	ft_is_alphanum(const char chr)
 {
 	return (ft_is_letter(chr) || (chr >= '0' && chr <= '9'));
 }
@@ -62,7 +62,7 @@ char	*ft_strupr(char *str)
 
 char	*ft_strcap(char *str)
 {
-	t_bool	first_letter;
+	int		first_letter;
 	size_t	i;
 	int		is_letter;
 

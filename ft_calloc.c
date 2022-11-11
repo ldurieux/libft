@@ -16,20 +16,22 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void		*res;
 	char		*c_ptr;
-	t_uint64	*i_ptr;
+	uint64_t	*i_ptr;
 	size_t		mem_size;
 
-	if (size > 0 && count > ULLONG_MAX / size)
+	if (size > 0 && count > SIZE_MAX / size)
+		return (NULL);
+	if (count == 0 || size == 0)
 		return (NULL);
 	mem_size = count * size;
 	res = malloc(mem_size);
 	if (!res)
 		return (NULL);
-	i_ptr = (t_uint64 *) res;
-	while (mem_size > sizeof(t_uint64) - 1)
+	i_ptr = (uint64_t *) res;
+	while (mem_size > sizeof(uint64_t) - 1)
 	{
 		*i_ptr++ = 0;
-		mem_size -= sizeof(t_uint64);
+		mem_size -= sizeof(uint64_t);
 	}
 	c_ptr = (char *) i_ptr;
 	while (mem_size-- > 0)
