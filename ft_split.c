@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static inline t_bool	ft_match_one_of(const char chr, const char *array)
+static t_bool	ft_match_one_of(const char chr, const char *array)
 {
 	while (*array)
 		if (chr == *array++)
@@ -20,7 +20,7 @@ static inline t_bool	ft_match_one_of(const char chr, const char *array)
 	return (0);
 }
 
-static inline size_t	ft_count_words(const char *str, const char *delims)
+static size_t	ft_count_words(const char *str, const char *delims)
 {
 	size_t	count;
 
@@ -38,7 +38,7 @@ static inline size_t	ft_count_words(const char *str, const char *delims)
 	return (count);
 }
 
-static inline char	**split_criterr(char **arr)
+static char	**split_criterr(char **arr)
 {
 	size_t	idx;
 

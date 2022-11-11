@@ -30,12 +30,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (res);
 }
 
-static inline size_t	join_r_init(size_t *total_len, size_t *offset,
+static size_t	join_r_init(size_t *total_len, size_t *offset,
 									size_t *i, const char *delim)
 {
 	*total_len = 0;
 	*offset = 0;
-	*i = -1;
+	*i = (size_t)-1;
 	return (ft_strlen(delim));
 }
 

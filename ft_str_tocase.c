@@ -18,12 +18,12 @@
  *		  1 if chr is an uppercase letter
  *		  0 otherwise
 */
-static inline int	ft_is_letter(const char chr)
+static int	ft_is_letter(const char chr)
 {
 	return ((chr >= 'a' && chr <= 'z') * -1 + (chr >= 'A' && chr <= 'Z'));
 }
 
-static inline t_bool	ft_is_alphanum(const char chr)
+static t_bool	ft_is_alphanum(const char chr)
 {
 	return (ft_is_letter(chr) || (chr >= '0' && chr <= '9'));
 }

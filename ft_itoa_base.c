@@ -16,7 +16,7 @@
 #define LONG_MAX_SIZE 19
 #define LLONG_MAX_SIZE 19
 
-static inline char	*make_res(char *buf_ptr, long long tmp)
+static char	*make_res(char *buf_ptr, long long tmp)
 {
 	char	*res;
 

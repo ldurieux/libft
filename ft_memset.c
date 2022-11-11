@@ -14,7 +14,7 @@
 
 #define BITS_IN_BYTE 8
 
-static inline t_uint64	make_mask(const t_uint8 value)
+static t_uint64	make_mask(const t_uint8 value)
 {
 	t_uint64	res;
 	t_uint8		i;

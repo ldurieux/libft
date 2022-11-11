@@ -14,7 +14,7 @@
 
 #define BASE_10_LEN 10
 
-static inline t_bool	ft_is_digit(const char chr)
+static t_bool	ft_is_digit(const char chr)
 {
 	return (chr >= '0' && chr <= '9');
 }

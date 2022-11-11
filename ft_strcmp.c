@@ -16,8 +16,8 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	register const unsigned char	*r1;
-	register const unsigned char	*r2;
+	const unsigned char	*r1;
+	const unsigned char	*r2;
 
 	r1 = (const unsigned char *)s1;
 	r2 = (const unsigned char *)s2;
@@ -31,7 +31,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	return (*r1 - *r2);
 }
 
-static inline unsigned char	ft_chrlwr(unsigned char c)
+static unsigned char	ft_chrlwr(unsigned char c)
 {
 	t_bool	cmp;
 
@@ -41,10 +41,10 @@ static inline unsigned char	ft_chrlwr(unsigned char c)
 
 int	ft_stricmp(const char *s1, const char *s2)
 {
-	register const unsigned char	*r1;
-	register const unsigned char	*r2;
-	unsigned char					a;
-	unsigned char					b;
+	const unsigned char	*r1;
+	const unsigned char	*r2;
+	unsigned char		a;
+	unsigned char		b;
 
 	r1 = (const unsigned char *)s1;
 	r2 = (const unsigned char *)s2;
@@ -62,10 +62,10 @@ int	ft_stricmp(const char *s1, const char *s2)
 
 int	ft_strnicmp(const char *s1, const char *s2, size_t n)
 {
-	register const unsigned char	*r1;
-	register const unsigned char	*r2;
-	unsigned char					a;
-	unsigned char					b;
+	const unsigned char	*r1;
+	const unsigned char	*r2;
+	unsigned char		a;
+	unsigned char		b;
 
 	r1 = (const unsigned char *)s1;
 	r2 = (const unsigned char *)s2;

@@ -17,7 +17,7 @@
 #define LLONG_MAX_SIZE 19
 #define BASE_10_LEN 10
 
-static inline char	*ft_itoa_res(char *buf, size_t len)
+static char	*ft_itoa_res(char *buf, size_t len)
 {
 	char	*res;
 
