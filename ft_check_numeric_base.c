@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-t_bool	ft_check_numeric_base(const char *base)
+int	ft_check_numeric_base(const char *base)
 {
 	size_t	len;
 

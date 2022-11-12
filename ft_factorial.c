@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-t_uint64	ft_factorial(t_int64 value)
+uint64_t	ft_factorial(int64_t value)
 {
-	t_int64		i;
-	t_uint64	res;
+	int64_t		i;
+	uint64_t	res;
 
 	if (value < 0)
 		return (0);

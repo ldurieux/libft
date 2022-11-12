@@ -14,7 +14,7 @@
 
 char	*ft_convert_base(const char *str, const char *from, const char *to)
 {
-	t_int64	value;
+	int64_t	value;
 
 	if (!str || !from || !to)
 		return (NULL);

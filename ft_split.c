@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static t_bool	ft_match_one_of(const char chr, const char *array)
+static int	ft_match_one_of(const char chr, const char *array)
 {
 	while (*array)
 		if (chr == *array++)

@@ -15,42 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
-# define ULLONG_MAX	0xffffffffffffffff
-# define LLONG_MAX	0x7fffffffffffffff
-# define LLONG_MIN	0x8000000000000000
-# define ULONG_MAX	0xffffffffffffffff
-# define LONG_MAX	0x7fffffffffffffff
-# define LONG_MIN	0x8000000000000000
-# define UINT_MAX	0xffffffff
-# define INT_MAX	0x7fffffff
-# define INT_MIN	0x80000000
-# define USHORT_MAX	0xffff
-# define SHORT_MAX	0x7fff
-# define SHORT_MIN	0x8000
-# define UBYTE_MAX	0xff
-# define BYTE_MAX	0x7f
-# define BYTE_MIN	0x80
-
-# define STDIN	0
-# define STDOUT	1
-# define STDERR	2
-
-typedef int					t_bool;
-
-typedef unsigned long long	t_uintmax;
-typedef unsigned long long	t_uint64;
-typedef unsigned int		t_uint32;
-typedef unsigned short		t_uint16;
-typedef unsigned char		t_uint8;
-
-typedef long long			t_intmax;
-typedef long long			t_int64;
-typedef int					t_int32;
-typedef short				t_int16;
-typedef char				t_int8;
-
-typedef long long			t_ptrdiff;
+# include <stdint.h>
+# include <stddef.h>
 
 /* --- PRINT --- */
 void		ft_putchar_fd(char c, int fd);
@@ -114,11 +80,11 @@ char		*ft_strcap(char *str);
 /* reverse the string */
 char		*ft_strrev(char *str);
 
-t_bool		ft_str_iswhitespace(const char *str);
-t_bool		ft_str_isalphanum(const char *str);
-t_bool		ft_str_isalpha(const char *str);
-t_bool		ft_str_isdigit(const char *str);
-t_bool		ft_str_isprintable(const char *str);
+int			ft_str_iswhitespace(const char *str);
+int			ft_str_isalphanum(const char *str);
+int			ft_str_isalpha(const char *str);
+int			ft_str_isdigit(const char *str);
+int			ft_str_isprintable(const char *str);
 
 int			ft_isalpha(int chr);
 int			ft_isdigit(int chr);
@@ -273,15 +239,15 @@ char		*ft_lltoa_base(long long value, const char *base);
  * does not contain a + or -
  * does not contain a whitespace
  * does not repeat characters */
-t_bool		ft_check_numeric_base(const char *base);
+int			ft_check_numeric_base(const char *base);
 
 /* convert str from base from to base to */
 char		*ft_convert_base(const char *str,
 				const char *from, const char *to);
 
 /* --- MATH --- */
-t_uint64	ft_factorial(t_int64 value);
-t_int64		ft_power(t_int64 value, t_int64 power);
+uint64_t	ft_factorial(int64_t value);
+int64_t		ft_power(int64_t value, int64_t power);
 
 /* --- LIST ---*/
 typedef struct s_list
@@ -302,28 +268,28 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /* --- INLINES --- */
 /* --- CHARACTER TYPE --- */
-static inline t_bool	ft_is_whitespace(const char chr)
+static inline int	ft_is_whitespace(const char chr)
 {
 	return (chr == ' ' || chr == '\f' || chr == '\n'
 		|| chr == '\r' || chr == '\t' || chr == '\v');
 }
 
 /* --- SIMPLE MATH --- */
-static inline t_uint64	ft_abs(t_int64 value)
+static inline uint64_t	ft_abs(int64_t value)
 {
 	return (
-		(t_uint64)(value * ((value > 0) * 2 - 1))
+		(uint64_t)(value * ((value > 0) * 2 - 1))
 	);
 }
 
-static inline t_int64	ft_min(t_int64 v1, t_int64 v2)
+static inline int64_t	ft_min(int64_t v1, int64_t v2)
 {
 	if (v1 > v2)
 		return (v2);
 	return (v1);
 }
 
-static inline t_int64	ft_max(t_int64 v1, t_int64 v2)
+static inline int64_t	ft_max(int64_t v1, int64_t v2)
 {
 	if (v1 < v2)
 		return (v2);

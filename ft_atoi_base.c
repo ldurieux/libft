@@ -15,7 +15,7 @@
 int	ft_atoi_base(const char *str, const char *base)
 {
 	int			res;
-	t_ptrdiff	digit;
+	ptrdiff_t	digit;
 	int			sign;
 	size_t		raddix;
 
@@ -31,10 +31,10 @@ int	ft_atoi_base(const char *str, const char *base)
 			sign = -1;
 	while (1)
 	{
-		digit = (t_ptrdiff)ft_strchr(base, *str++);
+		digit = (ptrdiff_t)ft_strchr(base, *str++);
 		if (!digit)
 			break ;
-		digit -= (t_ptrdiff)base;
+		digit -= (ptrdiff_t)base;
 		res = (int)(res * raddix + digit);
 	}
 	return (res * sign);
@@ -43,7 +43,7 @@ int	ft_atoi_base(const char *str, const char *base)
 long	ft_atol_base(const char *str, const char *base)
 {
 	long		res;
-	t_ptrdiff	digit;
+	ptrdiff_t	digit;
 	int			sign;
 	size_t		raddix;
 
@@ -59,10 +59,10 @@ long	ft_atol_base(const char *str, const char *base)
 			sign = -1;
 	while (1)
 	{
-		digit = (t_ptrdiff)ft_strchr(base, *str++);
+		digit = (ptrdiff_t)ft_strchr(base, *str++);
 		if (!digit)
 			break ;
-		digit -= (t_ptrdiff)base;
+		digit -= (ptrdiff_t)base;
 		res = (long)(res * raddix + digit);
 	}
 	return (res * sign);
@@ -71,7 +71,7 @@ long	ft_atol_base(const char *str, const char *base)
 long long	ft_atoll_base(const char *str, const char *base)
 {
 	long long	res;
-	t_ptrdiff	digit;
+	ptrdiff_t	digit;
 	int			sign;
 	size_t		raddix;
 
@@ -87,10 +87,10 @@ long long	ft_atoll_base(const char *str, const char *base)
 			sign = -1;
 	while (1)
 	{
-		digit = (t_ptrdiff)ft_strchr(base, *str++);
+		digit = (ptrdiff_t)ft_strchr(base, *str++);
 		if (!digit)
 			break ;
-		digit -= (t_ptrdiff)base;
+		digit -= (ptrdiff_t)base;
 		res = (long long)(res * raddix + digit);
 	}
 	return (res * sign);

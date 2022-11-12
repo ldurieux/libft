@@ -14,7 +14,7 @@
 
 #define BASE_10_LEN 10
 
-static t_bool	ft_is_digit(const char chr)
+static int	ft_is_digit(const char chr)
 {
 	return (chr >= '0' && chr <= '9');
 }
@@ -38,7 +38,7 @@ int	ft_strtoi(const char *str, char **end_ptr)
 		tmp = res * BASE_10_LEN + (*str++ - '0') * sign;
 		if ((tmp < res && sign == 1) || (tmp > res && sign == -1))
 		{
-			res = INT_MAX * (sign == 1) + INT_MIN * (sign == -1);
+			res = INT32_MAX * (sign == 1) + INT32_MIN * (sign == -1);
 			break ;
 		}
 		res = tmp;
@@ -67,7 +67,7 @@ long	ft_strtol(const char *str, char **end_ptr)
 		tmp = res * BASE_10_LEN + (*str++ - '0') * (long)sign;
 		if ((tmp < res && sign == 1) || (tmp > res && sign == -1))
 		{
-			res = LONG_MAX * (sign == 1) + LONG_MIN * (sign == -1);
+			res = INT64_MAX * (sign == 1) + INT64_MAX * (sign == -1);
 			break ;
 		}
 		res = tmp;
@@ -96,7 +96,7 @@ long long	ft_strtoll(const char *str, char **end_ptr)
 		tmp = res * BASE_10_LEN + (*str++ - '0') * (long long)sign;
 		if ((tmp < res && sign == 1) || (tmp > res && sign == -1))
 		{
-			res = LLONG_MAX * (sign == 1) + LLONG_MIN * (sign == -1);
+			res = INT64_MAX * (sign == 1) + INT64_MIN * (sign == -1);
 			break ;
 		}
 		res = tmp;
