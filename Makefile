@@ -8,6 +8,29 @@ SRCS		= \
 			  srcs/chr/ft_isprint.c \
 			  srcs/chr/ft_tolower.c \
 			  srcs/chr/ft_toupper.c \
+			  srcs/frwlist/at.c \
+			  srcs/frwlist/delete.c \
+			  srcs/frwlist/insert.c \
+			  srcs/frwlist/iter.c \
+			  srcs/frwlist/new.c \
+			  srcs/frwlist/remove.c \
+			  srcs/ft_stack/delete.c \
+			  srcs/ft_stack/iter.c \
+			  srcs/ft_stack/new.c \
+			  srcs/ft_stack/pop.c \
+			  srcs/ft_stack/push.c \
+			  srcs/list/at.c \
+			  srcs/list/delete.c \
+			  srcs/list/insert.c \
+			  srcs/list/iter.c \
+			  srcs/list/new.c \
+			  srcs/list/remove.c \
+			  srcs/map/delete.c \
+			  srcs/map/find.c \
+			  srcs/map/insert.c \
+			  srcs/map/iter.c \
+			  srcs/map/new.c \
+			  srcs/map/remove.c \
 			  srcs/math/ft_factorial.c \
 			  srcs/math/ft_power.c \
 			  srcs/mem/ft_bzero.c \
@@ -38,6 +61,11 @@ SRCS		= \
 			  srcs/put/ft_putendl_fd.c \
 			  srcs/put/ft_putnbr_fd.c \
 			  srcs/put/ft_putstr_fd.c \
+			  srcs/queue/delete.c \
+			  srcs/queue/iter.c \
+			  srcs/queue/new.c \
+			  srcs/queue/pop.c \
+			  srcs/queue/push.c \
 			  srcs/str/ft_atoi.c \
 			  srcs/str/ft_itoa.c \
 			  srcs/str/ft_split.c \
@@ -68,6 +96,12 @@ SRCS		= \
 			  srcs/str/ft_strtrim.c \
 			  srcs/str/ft_strtrm.c \
 			  srcs/str/ft_substr.c \
+			  srcs/vector/delete.c \
+			  srcs/vector/new.c \
+			  srcs/vector/pop_back.c \
+			  srcs/vector/push_back.c \
+			  srcs/vector/reserve.c \
+
 
 HEADERS		= \
 			  includes \
@@ -78,7 +112,7 @@ DEPS		= ${SRCS:%.c=$(BUILDDIR)/%.d}
 CC			= cc
 CCWFLGS		= -Wall -Wextra -Werror
 DEPSFLAGS	= -MMD -MP
-RM			= rm -f
+RM			= rm -Rf
 AR			= ar
 ARFLAGS		= rcs
 
