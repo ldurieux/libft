@@ -32,9 +32,9 @@ typedef struct s_ftlist
 t_ftlist		*ft_list_new(void);
 void			ft_list_delete(t_ftlist *this);
 
-int			ft_list_insert(t_ftlist *this, size_t index, void *value);
-int			ft_list_push_front(t_ftlist *this, void *value);
-int			ft_list_push_back(t_ftlist *this, void *value);
+int				ft_list_insert(t_ftlist *this, size_t index, void *value);
+int				ft_list_push_front(t_ftlist *this, void *value);
+int				ft_list_push_back(t_ftlist *this, void *value);
 void			*ft_list_remove_at(t_ftlist *this, size_t index);
 void			*ft_list_pop_front(t_ftlist *this);
 void			*ft_list_pop_back(t_ftlist *this);

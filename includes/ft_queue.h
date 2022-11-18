@@ -31,7 +31,7 @@ typedef struct s_ftqueue
 t_ftqueue	*ft_queue_new(void);
 void		ft_queue_delete(t_ftqueue *this);
 
-int		ft_queue_push(t_ftqueue *this, void *value);
+int			ft_queue_push(t_ftqueue *this, void *value);
 void		*ft_queue_pop(t_ftqueue *this);
 
 void		ft_queue_iter(t_ftqueue *this, void (*f)(void *));

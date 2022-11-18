@@ -27,9 +27,9 @@ typedef struct s_ftvector
 t_ftvector	*ft_vector_new(size_t data_size, size_t capacity);
 void		ft_vector_delete(t_ftvector *this);
 
-int		ft_vector_push_back(t_ftvector *this, void *value);
+int			ft_vector_push_back(t_ftvector *this, void *value);
 void		*ft_vector_pop_back(t_ftvector *this);
 
-int		ft_vector_reserve(t_ftvector *this, size_t capacity);
+int			ft_vector_reserve(t_ftvector *this, size_t capacity);
 
 #endif // FT_VECTOR_H

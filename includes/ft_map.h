@@ -32,8 +32,8 @@ typedef struct s_ftmap
 t_ftmap			*ft_map_new(size_t capacity);
 void			ft_map_delete(t_ftmap *this);
 
-int			ft_map_insert(t_ftmap *this, const char *key, void *value);
-int			ft_map_insert_n(t_ftmap *this, const char *key, size_t key_size,
+int				ft_map_insert(t_ftmap *this, const char *key, void *value);
+int				ft_map_insert_n(t_ftmap *this, const char *key, size_t key_size,
 					void *value);
 void			*ft_map_remove(t_ftmap *this, const char *key);
 

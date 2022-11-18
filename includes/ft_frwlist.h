@@ -31,10 +31,10 @@ typedef struct s_ftfrwlist
 t_ftfrwlist			*ft_frwlist_new(void);
 void				ft_frwlist_delete(t_ftfrwlist *this);
 
-int				ft_frwlist_insert(t_ftfrwlist *this, size_t index,
+int					ft_frwlist_insert(t_ftfrwlist *this, size_t index,
 						void *value);
-int				ft_frwlist_push_front(t_ftfrwlist *this, void *value);
-int				ft_frwlist_push_back(t_ftfrwlist *this, void *value);
+int					ft_frwlist_push_front(t_ftfrwlist *this, void *value);
+int					ft_frwlist_push_back(t_ftfrwlist *this, void *value);
 void				*ft_frwlist_remove_at(t_ftfrwlist *this, size_t index);
 void				*ft_frwlist_pop_front(t_ftfrwlist *this);
 void				*ft_frwlist_pop_back(t_ftfrwlist *this);

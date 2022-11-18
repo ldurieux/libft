@@ -30,7 +30,7 @@ typedef struct s_ftstack
 t_ftstack	*ft_stack_new(void);
 void		ft_stack_delete(t_ftstack *this);
 
-int		ft_stack_push(t_ftstack *this, void *value);
+int			ft_stack_push(t_ftstack *this, void *value);
 void		*ft_stack_pop(t_ftstack *this);
 
 void		ft_stack_iter(t_ftstack *this, void (*f)(void *));
