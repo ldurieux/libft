@@ -230,37 +230,9 @@ char		*ft_itoa_base(int value, const char *base);
 char		*ft_ltoa_base(long value, const char *base);
 char		*ft_lltoa_base(long long value, const char *base);
 
-/* check if a numeric base has :
- * more than 2 characters
- * does not contain a + or -
- * does not contain a whitespace
- * does not repeat characters */
-int			ft_check_numeric_base(const char *base);
-
-/* convert str from base from to base to */
-char		*ft_convert_base(const char *str,
-				const char *from, const char *to);
-
 /* --- MATH --- */
 uint64_t	ft_factorial(int64_t value);
 int64_t		ft_power(int64_t value, int64_t power);
-
-/* --- LIST ---*/
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
-
-t_list		*ft_lstnew(void *content);
-void		ft_lstadd_front(t_list **alst, t_list *new);
-void		ft_lstadd_back(t_list **alst, t_list *new);
-int			ft_lstsize(t_list *lst);
-t_list		*ft_lstlast(t_list *lst);
-void		ft_lstdelone(t_list *lst, void (*del)(void*));
-void		ft_lstclear(t_list **lst, void (*del)(void*));
-void		ft_lstiter(t_list *lst, void (*f)(void *));
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /* --- INLINES --- */
 /* --- CHARACTER TYPE --- */
